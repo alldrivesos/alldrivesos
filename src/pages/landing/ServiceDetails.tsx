@@ -11,9 +11,9 @@ const PROVIDER = {
 };
 
 const AREA_SERVED = [
-  { "@type": "AdministrativeArea", name: "Lagos" },
-  { "@type": "AdministrativeArea", name: "Abuja" },
-  { "@type": "AdministrativeArea", name: "Port Harcourt" },
+  { "@type": "AdministrativeArea", name: "MaryLand" },
+  { "@type": "AdministrativeArea", name: "Virginia" },
+  { "@type": "AdministrativeArea", name: "Washington" },
 ];
 
 // Shared content for SEO-rich pages
@@ -123,9 +123,18 @@ type ServiceData = {
 };
 
 const DMV_AREAS = [
-  { region: "Maryland", cities: "Baltimore, Silver Spring, Rockville, Columbia, Gaithersburg" },
-  { region: "Washington DC", cities: "Downtown, Capitol Hill, Northwest, Northeast" },
-  { region: "Virginia", cities: "Arlington, Alexandria, Fairfax, Tysons, Reston" },
+  {
+    region: "Maryland",
+    cities: "Baltimore, Silver Spring, Rockville, Columbia, Gaithersburg",
+  },
+  {
+    region: "Washington DC",
+    cities: "Downtown, Capitol Hill, Northwest, Northeast",
+  },
+  {
+    region: "Virginia",
+    cities: "Arlington, Alexandria, Fairfax, Tysons, Reston",
+  },
 ];
 
 const services: ServiceData[] = [
@@ -142,15 +151,20 @@ const services: ServiceData[] = [
       "Digital pressure gauge calibrated to manufacturer spec",
       "All four tires checked and balanced",
       "Quick visual inspection included",
-      "Available 24/7 across Lagos, Abuja & Port Harcourt",
+      "Available 24/7 across Maryland, Virginia & Washington",
     ],
     seo: {
-      title: "Tire Pump Service Near You | Mobile Tire Inflation | AllDrive SOS",
+      title:
+        "Tire Pump Service Near You | Mobile Tire Inflation | AllDrive SOS",
       intro:
         "A low tire can slow you down or leave you stuck. AllDrive SOS helps you quickly connect with nearby roadside technicians who provide mobile tire pump service at your location. Skip the search and delays. Request service, receive competitive quotes, and choose a technician who can get you moving again.",
       searchSection: {
         heading: "Mobile Tire Inflation Made Simple",
-        keywords: ["tire pump service near me", "mobile tire inflation", "roadside air for tires"],
+        keywords: [
+          "tire pump service near me",
+          "mobile tire inflation",
+          "roadside air for tires",
+        ],
         text: "If you're searching for tire pump service near me, mobile tire inflation, or roadside air for tires, AllDrive SOS gives you a faster way to get help. Technicians in our network can come to your location to restore safe tire pressure — whether you're at home, work, or on the roadside.",
       },
       whenToUse: {
@@ -162,26 +176,31 @@ const services: ServiceData[] = [
           "Your vehicle needs air before moving",
           "You're stuck without access to a pump",
         ],
-        footer: "Instead of risking damage, request mobile tire inflation and get help where you are.",
+        footer:
+          "Instead of risking damage, request mobile tire inflation and get help where you are.",
       },
       offersSection: {
         heading: "Emergency Tire Pump & Roadside Air Service",
-        intro: "When tire pressure drops unexpectedly, fast help matters. AllDrive SOS connects you with technicians who offer:",
+        intro:
+          "When tire pressure drops unexpectedly, fast help matters. AllDrive SOS connects you with technicians who offer:",
         offers: [
           "Emergency tire pump service",
           "Roadside tire inflation",
           "Mobile air for low or flat tires",
         ],
-        footer: "You can request help anytime and get connected with someone nearby who is ready to respond.",
+        footer:
+          "You can request help anytime and get connected with someone nearby who is ready to respond.",
       },
       areaSection: {
         heading: "Tire Pump Service in Maryland, DC, and Virginia",
         areas: DMV_AREAS,
-        footer: "If you need tire air near you, you can quickly find available technicians in your area.",
+        footer:
+          "If you need tire air near you, you can quickly find available technicians in your area.",
       },
       whySection: {
         heading: "Why Use AllDrive SOS",
-        footer: "You get control, speed, and transparent pricing — without the hassle.",
+        footer:
+          "You get control, speed, and transparent pricing — without the hassle.",
       },
       cta: {
         heading: "Request Tire Pump Service Now",
@@ -197,7 +216,7 @@ const services: ServiceData[] = [
     serviceType: "Motorcycle Repair",
     tagline: "Your bike breaks down — our tech shows up.",
     description:
-      "A broken-down motorcycle in Lagos traffic or on a long stretch of highway is stressful and potentially dangerous. Our mobile motorcycle technicians come fully equipped to your location to diagnose and fix the most common mechanical and electrical faults on the spot. From chain issues and punctures to electrical failures and carburetor problems, we carry the tools and spare parts to get you back riding without the expense or wait of a tow.",
+      "A broken-down motorcycle in  traffic or on a long stretch of highway is stressful and potentially dangerous. Our mobile motorcycle technicians come fully equipped to your location to diagnose and fix the most common mechanical and electrical faults on the spot. From chain issues and punctures to electrical failures and carburetor problems, we carry the tools and spare parts to get you back riding without the expense or wait of a tow.",
     features: [
       "On-site diagnosis for mechanical and electrical faults",
       "Common spare parts carried on every visit",
@@ -293,7 +312,8 @@ const services: ServiceData[] = [
           "It's unsafe to leave your vehicle",
           "You need fast roadside assistance at night or in traffic",
         ],
-        footer: "Instead of risking your safety or wasting time, request fuel delivery and get help where you are.",
+        footer:
+          "Instead of risking your safety or wasting time, request fuel delivery and get help where you are.",
       },
       offersSection: {
         heading: "Out of Gas Roadside Assistance",
@@ -305,16 +325,19 @@ const services: ServiceData[] = [
           "On-demand out of gas service",
           "Mobile fuel assistance",
         ],
-        footer: "You can request help anytime and get connected with someone nearby who can respond quickly.",
+        footer:
+          "You can request help anytime and get connected with someone nearby who can respond quickly.",
       },
       areaSection: {
         heading: "Fuel Delivery in Maryland, DC, and Virginia",
         areas: DMV_AREAS,
-        footer: "If you need gas delivery near you, you can quickly connect with available technicians in your area.",
+        footer:
+          "If you need gas delivery near you, you can quickly connect with available technicians in your area.",
       },
       whySection: {
         heading: "Why Use AllDrive SOS for Fuel Delivery",
-        footer: "You stay in control while getting the help you need without unnecessary delays.",
+        footer:
+          "You stay in control while getting the help you need without unnecessary delays.",
       },
       cta: {
         heading: "Request Fuel Delivery Now",
@@ -355,7 +378,8 @@ const services: ServiceData[] = [
       "Rapid response to minimise roadside wait",
     ],
     seo: {
-      title: "Emergency Towing Near You | 24/7 Tow Truck Service | AllDrive SOS",
+      title:
+        "Emergency Towing Near You | 24/7 Tow Truck Service | AllDrive SOS",
       intro:
         "Vehicle breakdowns can happen anytime. AllDrive SOS helps you quickly connect with nearby towing professionals who provide emergency towing and roadside assistance at your location. Skip the stress of searching for a tow truck. Request service, receive competitive quotes, and choose a provider who can respond fast.",
       searchSection: {
@@ -378,7 +402,8 @@ const services: ServiceData[] = [
           "Battery or mechanical issues leave the vehicle immobile",
           "After a breakdown in traffic or unsafe conditions",
         ],
-        footer: "Instead of waiting or guessing who to call, request emergency towing and connect with help nearby.",
+        footer:
+          "Instead of waiting or guessing who to call, request emergency towing and connect with help nearby.",
       },
       offersSection: {
         heading: "24/7 Roadside Towing Assistance",
@@ -391,7 +416,8 @@ const services: ServiceData[] = [
           "Roadside vehicle removal",
           "On-demand towing assistance",
         ],
-        footer: "You can request service anytime and get connected with providers ready to respond.",
+        footer:
+          "You can request service anytime and get connected with providers ready to respond.",
       },
       areaSection: {
         heading: "Towing Services in Maryland, DC, and Virginia",
@@ -458,7 +484,8 @@ const services: ServiceData[] = [
       "Available for inter-city transport",
     ],
     seo: {
-      title: "Exotic Car Transport Near You | Luxury & Enclosed Vehicle Shipping | AllDrive SOS",
+      title:
+        "Exotic Car Transport Near You | Luxury & Enclosed Vehicle Shipping | AllDrive SOS",
       intro:
         "Moving a high-value vehicle requires more than standard towing. AllDrive SOS connects you with nearby transport professionals who specialize in exotic, luxury, and low-clearance vehicle transport. Whether your car breaks down or needs careful relocation, you can request service, receive competitive quotes, and choose a provider equipped to handle your vehicle properly.",
       searchSection: {
@@ -481,11 +508,13 @@ const services: ServiceData[] = [
           "Transporting a collector or performance vehicle",
           "Extra protection is required during transport",
         ],
-        footer: "Instead of risking damage, request specialized transport designed for premium vehicles.",
+        footer:
+          "Instead of risking damage, request specialized transport designed for premium vehicles.",
       },
       offersSection: {
         heading: "Enclosed & High-End Vehicle Transport Options",
-        intro: "Through AllDrive SOS, you can connect with professionals offering:",
+        intro:
+          "Through AllDrive SOS, you can connect with professionals offering:",
         offers: [
           "Enclosed car transport (maximum protection)",
           "Low-clearance vehicle loading",
@@ -504,7 +533,8 @@ const services: ServiceData[] = [
       },
       whySection: {
         heading: "Why Use AllDrive SOS",
-        footer: "You get access to the right equipment and expertise without the hassle of searching manually.",
+        footer:
+          "You get access to the right equipment and expertise without the hassle of searching manually.",
       },
       cta: {
         heading: "Request Exotic Car Transport Now",
@@ -529,7 +559,8 @@ const services: ServiceData[] = [
       "Recommendations provided after each check",
     ],
     seo: {
-      title: "Vehicle Fluid Top-Up Near You | Emergency Roadside Fluid Service | AllDrive SOS",
+      title:
+        "Vehicle Fluid Top-Up Near You | Emergency Roadside Fluid Service | AllDrive SOS",
       intro:
         "Low vehicle fluids can quickly turn a normal drive into a breakdown risk. AllDrive SOS helps drivers connect with nearby roadside technicians who provide on-location vehicle fluid top-up services — anytime, anywhere. Instead of searching multiple providers while stranded, request help through one platform and get connected with available roadside professionals near you.",
       searchSection: {
@@ -574,17 +605,31 @@ const services: ServiceData[] = [
       areaSection: {
         heading: "24/7 Vehicle Fluid Assistance in Maryland, DC & Virginia",
         areas: [
-          { region: "Maryland", cities: "Baltimore • Silver Spring • Rockville • Columbia • Bethesda • Gaithersburg" },
-          { region: "Washington DC", cities: "Downtown DC • Capitol Hill • Northwest • Northeast • Southwest DC" },
-          { region: "Northern Virginia", cities: "Arlington • Alexandria • Fairfax • Tysons • Reston • Falls Church" },
+          {
+            region: "Maryland",
+            cities:
+              "Baltimore • Silver Spring • Rockville • Columbia • Bethesda • Gaithersburg",
+          },
+          {
+            region: "Washington DC",
+            cities:
+              "Downtown DC • Capitol Hill • Northwest • Northeast • Southwest DC",
+          },
+          {
+            region: "Northern Virginia",
+            cities:
+              "Arlington • Alexandria • Fairfax • Tysons • Reston • Falls Church",
+          },
         ],
         footer:
           "Whether you need a coolant top-up in Silver Spring, engine fluid service in Rockville, or roadside fluid assistance in Columbia, nearby help can be requested in minutes.",
       },
       whySection: {
         heading: "Why Drivers Choose AllDrive SOS",
-        intro: "Roadside problems are stressful. We focus on making assistance easier to access.",
-        footer: "Our goal is simple: help drivers reach nearby roadside technicians faster.",
+        intro:
+          "Roadside problems are stressful. We focus on making assistance easier to access.",
+        footer:
+          "Our goal is simple: help drivers reach nearby roadside technicians faster.",
       },
       cta: {
         heading: "Request Roadside Fluid Top-Up Now",
@@ -625,7 +670,8 @@ const services: ServiceData[] = [
       "Available 24/7 across all service areas",
     ],
     seo: {
-      title: "Jump Start Service Near You | Dead Battery Roadside Assistance | AllDrive SOS",
+      title:
+        "Jump Start Service Near You | Dead Battery Roadside Assistance | AllDrive SOS",
       intro:
         "A dead battery can stop your day instantly. AllDrive SOS helps you connect with nearby roadside technicians who provide fast jump start service at your location. No need to search or call around. Request help, receive competitive quotes, and choose a technician who can get your vehicle running again.",
       searchSection: {
@@ -653,23 +699,27 @@ const services: ServiceData[] = [
       },
       offersSection: {
         heading: "Emergency Jump Start & Battery Help",
-        intro: "When your vehicle won't start, time matters. AllDrive SOS connects you with technicians who offer:",
+        intro:
+          "When your vehicle won't start, time matters. AllDrive SOS connects you with technicians who offer:",
         offers: [
           "Emergency jump start service",
           "Roadside battery assistance",
           "On-demand car jump start",
           "Quick response for no-start situations",
         ],
-        footer: "You can request help anytime and get connected with someone ready to assist.",
+        footer:
+          "You can request help anytime and get connected with someone ready to assist.",
       },
       areaSection: {
         heading: "Jump Start Service in Maryland, DC, and Virginia",
         areas: DMV_AREAS,
-        footer: "If you need a jump start near you, you can quickly find available technicians in your area.",
+        footer:
+          "If you need a jump start near you, you can quickly find available technicians in your area.",
       },
       whySection: {
         heading: "Why Use AllDrive SOS",
-        footer: "You get quick access to help without unnecessary delays or commitments.",
+        footer:
+          "You get quick access to help without unnecessary delays or commitments.",
       },
       cta: {
         heading: "Request Jump Start Service Now",
@@ -778,7 +828,9 @@ export default function ServiceDetails() {
         {/* Search / Keyword Section */}
         <div className="section bg-[#F8F8F8]">
           <div className="box">
-            <h2 className="text-2xl lg:text-3xl fw-700 mb-4">{s.searchSection.heading}</h2>
+            <h2 className="text-2xl lg:text-3xl fw-700 mb-4">
+              {s.searchSection.heading}
+            </h2>
             <div className="flex flex-wrap gap-2 mb-5">
               {s.searchSection.keywords.map((kw, i) => (
                 <span
@@ -789,20 +841,27 @@ export default function ServiceDetails() {
                 </span>
               ))}
             </div>
-            <p className="fs-500 text-gray-600 lg:w-8/12">{s.searchSection.text}</p>
+            <p className="fs-500 text-gray-600 lg:w-8/12">
+              {s.searchSection.text}
+            </p>
           </div>
         </div>
 
         {/* How It Works */}
         <div className="section bg-white">
           <div className="box">
-            <h2 className="text-center fw-700 text-2xl lg:text-3xl">How AllDrive SOS Works</h2>
+            <h2 className="text-center fw-700 text-2xl lg:text-3xl">
+              How AllDrive SOS Works
+            </h2>
             <p className="text-center fs-500 text-gray-500 mt-2">
               Getting help is simple — no waiting, no calling around.
             </p>
             <div className="grid lg:grid-cols-3 gap-8 mt-12">
               {SEO_HOW_IT_WORKS.map((step) => (
-                <div key={step.step} className="new-shade bg-[#F8F8F8] rounded-[13px] p-8">
+                <div
+                  key={step.step}
+                  className="new-shade bg-[#F8F8F8] rounded-[13px] p-8"
+                >
                   <p className="text-4xl fw-700 text-[#FEB470]">{step.step}</p>
                   <p className="fw-600 text-lg mt-4">{step.title}</p>
                   <p className="fs-400 text-gray-500 mt-2">{step.desc}</p>
@@ -816,8 +875,12 @@ export default function ServiceDetails() {
         {s.extraSection && (
           <div className="section bg-[#F8F8F8]">
             <div className="box">
-              <h2 className="text-2xl lg:text-3xl fw-700 mb-3">{s.extraSection.heading}</h2>
-              <p className="fs-500 text-gray-600 mb-6">{s.extraSection.intro}</p>
+              <h2 className="text-2xl lg:text-3xl fw-700 mb-3">
+                {s.extraSection.heading}
+              </h2>
+              <p className="fs-500 text-gray-600 mb-6">
+                {s.extraSection.intro}
+              </p>
               <div className="grid md:grid-cols-2 gap-4 lg:w-8/12">
                 {s.extraSection.items.map((item, i) => (
                   <div key={i} className="flex gap-x-3 items-start">
@@ -828,16 +891,22 @@ export default function ServiceDetails() {
                   </div>
                 ))}
               </div>
-              <p className="mt-6 fs-500 text-gray-500 lg:w-8/12">{s.extraSection.footer}</p>
+              <p className="mt-6 fs-500 text-gray-500 lg:w-8/12">
+                {s.extraSection.footer}
+              </p>
             </div>
           </div>
         )}
 
         {/* When to Use */}
-        <div className={`section ${s.extraSection ? "bg-white" : "bg-[#F8F8F8]"}`}>
+        <div
+          className={`section ${s.extraSection ? "bg-white" : "bg-[#F8F8F8]"}`}
+        >
           <div className="box lg:flex gap-x-16 items-start">
             <div className="lg:w-6/12">
-              <h2 className="text-2xl lg:text-3xl fw-700 mb-6">{s.whenToUse.heading}</h2>
+              <h2 className="text-2xl lg:text-3xl fw-700 mb-6">
+                {s.whenToUse.heading}
+              </h2>
               <div className="grid gap-4">
                 {s.whenToUse.situations.map((situation, i) => (
                   <div key={i} className="flex gap-x-3 items-start">
@@ -854,8 +923,12 @@ export default function ServiceDetails() {
             {/* Offers Section (right column if present) */}
             {s.offersSection && (
               <div className="lg:w-6/12 mt-10 lg:mt-0">
-                <h2 className="text-2xl lg:text-3xl fw-700 mb-3">{s.offersSection.heading}</h2>
-                <p className="fs-500 text-gray-600 mb-5">{s.offersSection.intro}</p>
+                <h2 className="text-2xl lg:text-3xl fw-700 mb-3">
+                  {s.offersSection.heading}
+                </h2>
+                <p className="fs-500 text-gray-600 mb-5">
+                  {s.offersSection.intro}
+                </p>
                 <div className="grid gap-3">
                   {s.offersSection.offers.map((offer, i) => (
                     <div key={i} className="flex gap-x-3 items-start">
@@ -867,7 +940,9 @@ export default function ServiceDetails() {
                   ))}
                 </div>
                 {s.offersSection.footer && (
-                  <p className="mt-5 fs-500 text-gray-500">{s.offersSection.footer}</p>
+                  <p className="mt-5 fs-500 text-gray-500">
+                    {s.offersSection.footer}
+                  </p>
                 )}
               </div>
             )}
@@ -877,7 +952,9 @@ export default function ServiceDetails() {
         {/* Area Section */}
         <div className="section bg-[#172748] text-white">
           <div className="box">
-            <h2 className="text-2xl lg:text-3xl fw-700 mb-8">{s.areaSection.heading}</h2>
+            <h2 className="text-2xl lg:text-3xl fw-700 mb-8">
+              {s.areaSection.heading}
+            </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {s.areaSection.areas.map((area, i) => (
                 <div key={i}>
@@ -894,9 +971,13 @@ export default function ServiceDetails() {
         <div className="section bg-[#F8F8F8]">
           <div className="box lg:flex gap-x-16 items-start">
             <div className="lg:w-5/12">
-              <h2 className="text-2xl lg:text-3xl fw-700 mb-3">{s.whySection.heading}</h2>
+              <h2 className="text-2xl lg:text-3xl fw-700 mb-3">
+                {s.whySection.heading}
+              </h2>
               {s.whySection.intro && (
-                <p className="fs-500 text-gray-600 mb-5">{s.whySection.intro}</p>
+                <p className="fs-500 text-gray-600 mb-5">
+                  {s.whySection.intro}
+                </p>
               )}
             </div>
             <div className="lg:w-7/12 mt-6 lg:mt-0">
@@ -958,8 +1039,12 @@ export default function ServiceDetails() {
               <span className="text-[#E4B080] border border-[#E4B080] px-3 py-[4px] rounded-[100px] fs-300">
                 {service.serviceType}
               </span>
-              <h1 className="text-3xl lg:text-5xl fw-700 mt-5">{service.name}</h1>
-              <p className="mt-4 fs-500 lg:fs-600 text-gray-300">{service.tagline}</p>
+              <h1 className="text-3xl lg:text-5xl fw-700 mt-5">
+                {service.name}
+              </h1>
+              <p className="mt-4 fs-500 lg:fs-600 text-gray-300">
+                {service.tagline}
+              </p>
               <button
                 onClick={() => navigate(`/request/${service.id}`)}
                 className="btn-feel mt-8 flex items-center gap-x-3 bg-[#C97833] text-white px-6 py-3 fs-500 fw-600"
@@ -969,7 +1054,11 @@ export default function ServiceDetails() {
             </div>
             <div className="lg:w-5/12 flex justify-center mt-10 lg:mt-0">
               <div className="w-44 h-44 lg:w-56 lg:h-56 rounded-full bg-white/10 place-center">
-                <img src={service.icon} alt={service.name} className="w-24 lg:w-32" />
+                <img
+                  src={service.icon}
+                  alt={service.name}
+                  className="w-24 lg:w-32"
+                />
               </div>
             </div>
           </div>
@@ -984,8 +1073,12 @@ export default function ServiceDetails() {
               <span className="text-[#C97833] fw-600 fs-400 uppercase tracking-wider">
                 About This Service
               </span>
-              <p className="text-2xl lg:text-3xl fw-700 mt-3 mb-5">What We Do For You</p>
-              <p className="text-gray-600 fs-500 leading-relaxed">{service.description}</p>
+              <p className="text-2xl lg:text-3xl fw-700 mt-3 mb-5">
+                What We Do For You
+              </p>
+              <p className="text-gray-600 fs-500 leading-relaxed">
+                {service.description}
+              </p>
             </div>
             <div className="lg:w-6/12 mt-10 lg:mt-0">
               <p className="fw-700 text-lg mb-6">What's Included</p>
@@ -1007,13 +1100,18 @@ export default function ServiceDetails() {
       {/* How It Works */}
       <div className="section bg-white">
         <div className="box">
-          <p className="text-center fw-700 text-2xl lg:text-3xl">How It Works</p>
+          <p className="text-center fw-700 text-2xl lg:text-3xl">
+            How It Works
+          </p>
           <p className="text-center fs-500 text-gray-500 mt-2">
             Getting help is simple — three steps and you're sorted.
           </p>
           <div className="grid lg:grid-cols-3 gap-8 mt-12">
             {HOW_IT_WORKS.map((step) => (
-              <div key={step.step} className="new-shade bg-[#F8F8F8] rounded-[13px] p-8">
+              <div
+                key={step.step}
+                className="new-shade bg-[#F8F8F8] rounded-[13px] p-8"
+              >
                 <p className="text-4xl fw-700 text-[#FEB470]">{step.step}</p>
                 <p className="fw-600 text-lg mt-4">{step.title}</p>
                 <p className="fs-400 text-gray-500 mt-2">{step.desc}</p>
@@ -1026,10 +1124,12 @@ export default function ServiceDetails() {
       {/* CTA */}
       <div className="section bg-[#C97833] text-white">
         <div className="box text-center">
-          <p className="text-2xl lg:text-4xl fw-700">Need {service.name} Right Now?</p>
+          <p className="text-2xl lg:text-4xl fw-700">
+            Need {service.name} Right Now?
+          </p>
           <p className="mt-3 fs-500 lg:w-6/12 mx-auto text-white/80">
-            Our technicians are on standby across Lagos, Abuja, and Port Harcourt. Request help in
-            under a minute.
+            Our technicians are on standby across Maryland, Virginia,
+            Washington. Request help in under a minute.
           </p>
           <button
             onClick={() => navigate(`/request/${service.id}`)}
