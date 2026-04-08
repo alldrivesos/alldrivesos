@@ -232,7 +232,7 @@ const services: ServiceData[] = [
     serviceType: "Car Battery Replacement",
     tagline: "New battery. Installed at your door.",
     description:
-      "A flat battery often strikes without warning — especially in the heat of a Nigerian afternoon. Rather than calling a tow or hunting for a mechanic, we deliver and install a compatible replacement battery directly at your location. Our technician tests your existing battery to confirm it's beyond recovery, then swaps in the right battery for your vehicle and verifies the charging system is healthy before leaving you to drive on.",
+      "A flat battery often strikes without warning — especially in the heat of a  afternoon. Rather than calling a tow or hunting for a mechanic, we deliver and install a compatible replacement battery directly at your location. Our technician tests your existing battery to confirm it's beyond recovery, then swaps in the right battery for your vehicle and verifies the charging system is healthy before leaving you to drive on.",
     features: [
       "Battery test and diagnosis on-site",
       "Wide range of battery brands and sizes in stock",
@@ -264,7 +264,7 @@ const services: ServiceData[] = [
     serviceType: "Flat Tire Repair",
     tagline: "Flat tire, fast fix — right where you are.",
     description:
-      "A flat tire at the side of a busy road is one of the most common — and most avoidable — delays on Nigerian roads. Our roadside tire change technicians arrive with all the equipment needed to swap your damaged tire for your spare quickly, safely, and without causing further damage to your alloys or wheel studs. We set up proper warning signals, torque your wheel nuts to spec, and check your spare's pressure before calling it done.",
+      "A flat tire at the side of a busy road is one of the most common — and most avoidable — delays on  roads. Our roadside tire change technicians arrive with all the equipment needed to swap your damaged tire for your spare quickly, safely, and without causing further damage to your alloys or wheel studs. We set up proper warning signals, torque your wheel nuts to spec, and check your spare's pressure before calling it done.",
     features: [
       "Rapid flat tire replacement at your location",
       "Warning signs and safe setup on busy roads",
@@ -280,7 +280,7 @@ const services: ServiceData[] = [
     serviceType: "Emergency Fuel Delivery",
     tagline: "Out of fuel? We'll bring enough to get you moving.",
     description:
-      "Running dry on a Nigerian expressway or in gridlock traffic can be more than an inconvenience — it can be dangerous. Our emergency fuel delivery service brings enough petrol or diesel to your exact location to get you to the nearest filling station. We use safe, approved containers and spill-free delivery equipment, so there's no mess and no risk.",
+      "Running dry on a  expressway or in gridlock traffic can be more than an inconvenience — it can be dangerous. Our emergency fuel delivery service brings enough petrol or diesel to your exact location to get you to the nearest filling station. We use safe, approved containers and spill-free delivery equipment, so there's no mess and no risk.",
     features: [
       "Emergency petrol and diesel delivery",
       "Delivered directly to your location — road or car park",
