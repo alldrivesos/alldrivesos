@@ -38,7 +38,7 @@ const Assistance = () => {
                   !!service.data.length &&
                   service.data.slice(0, 7).map((item: ServiceCatItem) => (
                     <div
-                      onClick={() => navigate(`/request/${item.id}`)}
+                      onClick={() => navigate(`/all-services/${item.id}`)}
                       className="new-shade text-center h-[250px] rounded-[13px] bg-white w-full place-center hover:scale-105 duration-100 cursor-pointer"
                     >
                       <div>
