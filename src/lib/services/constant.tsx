@@ -73,6 +73,8 @@ export const SELECT_QOUTE = `/service-quote/select-driver-quote`;
 export const INITIATE_PAYMENT = `/service-quote/pay-selected-quote`;
 export const CONFIRM_PAYMENT = `/service-quote/verify-selected-quote`;
 
+export const GET_SERVICE_BY_NAME = "/services/name";
+
 // routine endpoints
 export const UPLOAD_FILE = "/upload";
 

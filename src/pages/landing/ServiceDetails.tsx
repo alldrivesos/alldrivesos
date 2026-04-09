@@ -731,10 +731,10 @@ const services: ServiceData[] = [
 ];
 
 export default function ServiceDetails() {
-  const { id } = useParams();
+  const { name } = useParams();
   const navigate = useNavigate();
-
-  const service = services.find((s) => s.id === id);
+  const decoded_name = decodeURIComponent(name);
+  const service = services.find((s) => s.name === decoded_name);
 
   const schema = service
     ? {

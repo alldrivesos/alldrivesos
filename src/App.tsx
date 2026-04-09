@@ -53,7 +53,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/faqs" element={<FaqPage />} />
         <Route path="/all-services" element={<AllServices />} />
-        <Route path="/all-services/:id/" element={<ServiceDetails />} />
+        <Route path="/all-services/:name/" element={<ServiceDetails />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
         <Route path="/providers-faqs" element={<ProvidersFaqPage />} />

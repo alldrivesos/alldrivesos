@@ -30,7 +30,7 @@ export default function AllServices() {
               {service?.data?.map((item: ServiceCatItem) => (
                 <div
                   key={item.id}
-                  onClick={() => navigate(`/all-services/${item.id}`)}
+                  onClick={() => navigate(`/all-services/${item.name}`)}
                   className="new-shade text-center h-[250px] rounded-[13px] bg-white w-full place-center hover:scale-105 duration-100 cursor-pointer"
                 >
                   <div>
