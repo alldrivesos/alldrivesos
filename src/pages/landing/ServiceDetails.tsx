@@ -733,8 +733,9 @@ const services: ServiceData[] = [
 export default function ServiceDetails() {
   const { name } = useParams();
   const navigate = useNavigate();
-  const decoded_name = decodeURIComponent(name);
-  const service = services.find((s) => s.name === decoded_name);
+  const decoded_name = decodeURIComponent(name ?? "");
+  const normalize = (s: string) => s.trim().replace(/\s+/g, " ").toLocaleLowerCase();
+  const service = services.find((s) => normalize(s.name) === normalize(decoded_name));
 
   const schema = service
     ? {
@@ -753,7 +754,7 @@ export default function ServiceDetails() {
       <LandingLayout>
         <div className="min-h-screen place-center">
           <div className="text-center">
-            <p className="text-xl fw-600">Service not found.</p>
+            <p className="text-xl fw-600">Service not found. {decoded_name}</p>
             <button
               onClick={() => navigate("/all-services")}
               className="btn-feel mt-6 flex items-center gap-x-2 mx-auto bg-[#C97833] text-white px-6 py-2"
