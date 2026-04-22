@@ -27,22 +27,28 @@ export default function AllServices() {
             <p>Loading services...</p>
           ) : (
             <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
-              {service?.data?.map((item: ServiceCatItem) => (
-                <div
-                  key={item.id}
-                  onClick={() => navigate(`/all-services/${item.name}`)}
-                  className="new-shade text-center h-[250px] rounded-[13px] bg-white w-full place-center hover:scale-105 duration-100 cursor-pointer"
-                >
-                  <div>
-                    <img
-                      src={item.icon}
-                      alt={item.name}
-                      className="w-16 mx-auto"
-                    />
-                    <p className="mt-4 fw-600">{item.name}</p>
+              {service?.data?.map(
+                (item: { name: string; icon: string; id: string }) => (
+                  <div
+                    key={item.id}
+                    onClick={() =>
+                      navigate(
+                        `/all-services/${item.name.replace(/\s+/g, "-").toLowerCase()}`,
+                      )
+                    }
+                    className="new-shade text-center h-[250px] rounded-[13px] bg-white w-full place-center hover:scale-105 duration-100 cursor-pointer"
+                  >
+                    <div>
+                      <img
+                        src={item.icon}
+                        alt={item.name}
+                        className="w-16 mx-auto"
+                      />
+                      <p className="mt-4 fw-600">{item.name}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ),
+              )}
             </div>
           )}
         </div>
