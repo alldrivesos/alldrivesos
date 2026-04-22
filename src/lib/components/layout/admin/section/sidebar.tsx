@@ -39,6 +39,15 @@ const SidebarLayout: FC<Props> = ({ toggled, setToggled }) => {
           transitionDuration={600}
           menuItemStyles={{
             button: ({ level, active }) => {
+              if (level === 1)
+                return {
+                  color: active ? "black" : "#b5b3b3",
+                  background: active ? "#e3f9ff" : "#111827",
+                  "&:hover": {
+                    color: "black",
+                    background: "#e3f9ff",
+                  },
+                };
               if (level === 0)
                 return {
                   color: active ? "black" : "#b5b3b3",
