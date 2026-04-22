@@ -8,8 +8,8 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import { uploadFile } from "../../../services/api/routineApi";
 import { toast } from "react-toastify";
 import { createBlog, getBlogCategory } from "../../../services/api/blogApi";
-import 'react-quill/dist/quill.snow.css';
-import ReactQuill from "react-quill"
+import "react-quill/dist/quill.snow.css";
+import ReactQuill from "react-quill";
 
 const AddBlogPost = () => {
   const { data: category } = useQuery({
@@ -18,7 +18,7 @@ const AddBlogPost = () => {
   });
   const [isBusy, setIsBusy] = useState(false);
   const [imageValue, setImageValue] = useState<Array<File>>();
-  const [descInput, setDescInput] = useState<string>('')
+  const [descInput, setDescInput] = useState<string>("");
 
   const {
     control,
@@ -41,11 +41,11 @@ const AddBlogPost = () => {
       toast.success("Blog post created successfuly");
       setIsBusy(false);
       reset();
-      setDescInput('')
+      setDescInput("");
       setImageValue([]);
     },
-    onError: (error) => {
-      toast.error(error.message);
+    onError: (error: any) => {
+      toast.error(error?.response?.data?.message || "Something went wrong");
       setIsBusy(false);
     },
   });
@@ -68,8 +68,8 @@ const AddBlogPost = () => {
           };
           addPost.mutate(payload);
         },
-        onError: (error) => {
-          toast.error(error.message);
+        onError: (error: any) => {
+          toast.error(error?.response?.data?.message || "Something went wrong");
           setIsBusy(false);
         },
       });
@@ -133,17 +133,15 @@ const AddBlogPost = () => {
             />
           </div>
           <div>
-          <div className="mt-6 mb-16">
-            <p className="text-[#000000B2] fw-500 mb-1">
-              Description 
-            </p>
-            <ReactQuill
-              theme="snow"
-              value={descInput}
-              onChange={setDescInput}
-              className="h-28 nunito"
-            />
-          </div>
+            <div className="mt-6 mb-16">
+              <p className="text-[#000000B2] fw-500 mb-1">Description</p>
+              <ReactQuill
+                theme="snow"
+                value={descInput}
+                onChange={setDescInput}
+                className="h-28 nunito"
+              />
+            </div>
           </div>
           <div>
             <ImageInput
