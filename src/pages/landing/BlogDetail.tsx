@@ -58,7 +58,7 @@ const BlogDetail = () => {
                     {/* {data?.tags.map((item: any) => ( */}
                     <p
                       className="px-2 py-[2px] bg-blue-50 fw-500 rounded-xl fs-400"
-                    // key={item.id}
+                      // key={item.id}
                     >
                       {data?.data?.category?.name}
                     </p>
@@ -70,7 +70,7 @@ const BlogDetail = () => {
                     <img
                       src={data?.data?.coverImage}
                       alt="coverImage"
-                      className="w-full xl:h-[450px] 2xl:h-[550px] object-cover"
+                      className="w-full xl:h-[450px] 2xl:h-[550px] object-contain"
                     />
                   </div>
                   <div className="mt-16">
@@ -81,9 +81,7 @@ const BlogDetail = () => {
                     />
                   </div>
                   <div className="mt-3">
-                    {user.token !== '' &&
-                      <BlogComments id={id} />
-                    }
+                    {user.token !== "" && <BlogComments id={id} />}
                   </div>
                 </div>
               </div>

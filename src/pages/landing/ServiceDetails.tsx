@@ -733,9 +733,9 @@ const services: ServiceData[] = [
 export default function ServiceDetails() {
   const { name } = useParams();
   const navigate = useNavigate();
-  const decoded_name = decodeURIComponent(name ?? "").replace(/-/g, " ");
-  const normalize = (s: string) => s.trim().replace(/\s+/g, " ").toLocaleLowerCase();
-  const service = services.find((s) => normalize(s.name) === normalize(decoded_name));
+  const decoded_name = decodeURIComponent(name ?? "");
+  const toSlug = (s: string) => s.trim().toLowerCase().replace(/\s+/g, "-");
+  const service = services.find((s) => toSlug(s.name) === decoded_name.toLowerCase());
 
   const schema = service
     ? {
