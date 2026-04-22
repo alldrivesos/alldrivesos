@@ -39,6 +39,7 @@ const GeneralInfo: FC<Props> = ({ next, prevKyc, isLoading }) => {
   const [bizCert, setbizCert] = useState<Array<File>>();
   const [sending, setSending] = useState(0);
   const [disabledField] = useState(false);
+  const [showTinTooltip, setShowTinTooltip] = useState(false);
 
   const { ref } = usePlacesWidget({
     apiKey: GOOGLE_API_KEY,
@@ -400,27 +401,51 @@ const GeneralInfo: FC<Props> = ({ next, prevKyc, isLoading }) => {
                 />
               </div>
 
-              <Controller
-                name="tin"
-                control={control}
-                rules={{
-                  required: {
-                    value: true,
-                    message: "Please enter category tin",
-                  },
-                }}
-                disabled={disabledField}
-                render={({ field }) => (
-                  <TextInput
-                    label="Tax Identification Number"
-                    labelClassName="text-[#000000B2] fw-500"
-                    error={errors.tin?.message}
-                    type={InputType.text}
-                    {...field}
-                    ref={null}
-                  />
+              <div>
+                <Controller
+                  name="tin"
+                  control={control}
+                  rules={{
+                    required: {
+                      value: true,
+                      message: "Please enter category tin",
+                    },
+                  }}
+                  disabled={disabledField}
+                  render={({ field }) => (
+                    <TextInput
+                      label="Tax Identification Number"
+                      labelClassName="text-[#000000B2] fw-500"
+                      error={errors.tin?.message}
+                      type={InputType.text}
+                      {...field}
+                      ref={null}
+                    />
+                  )}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowTinTooltip((v) => !v)}
+                  className="mt-1 flex items-center gap-1 text-blue-600 text-sm underline"
+                >
+                  <FaCircleInfo /> Why do we ask for your TIN?
+                </button>
+                {showTinTooltip && (
+                  <div className="mt-2 p-4 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 leading-relaxed">
+                    <p className="fw-700 mb-1">TIN Collection Notice</p>
+                    <p className="fw-600 mb-2">Tax Identification Number Requirement</p>
+                    <p>
+                      AllDrive SOS collects your Tax Identification Number (TIN) as part of our identity
+                      verification and tax compliance process. If you provide services and receive payments
+                      through the platform, federal law requires us to collect tax information, verify
+                      contractor identity, and report eligible earnings to the Internal Revenue Service (IRS),
+                      including issuing Form 1099-NEC where applicable. Your information is collected solely
+                      for compliance, payment processing, fraud prevention, and regulatory obligations, and is
+                      handled using industry-standard security controls.
+                    </p>
+                  </div>
                 )}
-              />
+              </div>
             </div>
             <div className="mt-3 relative">
               {!isLoading && (

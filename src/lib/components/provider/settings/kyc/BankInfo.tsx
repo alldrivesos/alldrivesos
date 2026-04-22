@@ -27,6 +27,7 @@ const BankInfo: FC<Props> = ({ prev }) => {
       account_name: kyc?.bank_account_name || "",
       account_number: kyc?.bank_account_number || "",
       account_type: kyc?.account_type || "",
+      tax_id: kyc?.tax_id || "",
     },
   });
   const mutation = useMutation({
@@ -44,7 +45,7 @@ const BankInfo: FC<Props> = ({ prev }) => {
         Object.entries<any>(err?.response.data?.errors).forEach(
           ([_, value]) => {
             toast.error(value.message);
-          }
+          },
         );
         setIsBusy(false);
       }
@@ -59,6 +60,7 @@ const BankInfo: FC<Props> = ({ prev }) => {
       bank_account_name: data.account_name,
       account_type: data.account_type,
       routing_number: data.routing_num,
+      tax_id: data.tax_id,
       insurance_doc: kyc?.insurance_doc,
       business_phone: kyc.business_phone_number,
     };
@@ -164,6 +166,26 @@ const BankInfo: FC<Props> = ({ prev }) => {
                   label="Account Type"
                   labelClassName="text-[#000000B2] fw-500"
                   error={errors.bank_name?.message}
+                  type={InputType.text}
+                  {...field}
+                  ref={null}
+                />
+              )}
+            />
+            <Controller
+              name="tax_id"
+              control={control}
+              rules={{
+                required: {
+                  value: true,
+                  message: "Please enter your Social Security Number",
+                },
+              }}
+              render={({ field }) => (
+                <TextInput
+                  label="Social Security Number"
+                  labelClassName="text-[#000000B2] fw-500"
+                  error={errors.tax_id?.message}
                   type={InputType.text}
                   {...field}
                   ref={null}

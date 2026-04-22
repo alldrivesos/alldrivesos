@@ -17,7 +17,7 @@ const BlogItem: FC<Props> = ({ data }) => {
         <img
           src={data?.coverImage}
           alt="blog-img"
-          className="w-full h-[200px] rounded-t-lg lg:h-[220px] object-cover"
+          className="w-full h-[200px] rounded-t-lg lg:h-[220px] object-contain"
         />
       </div>
       <div className="p-4 rounded-b-lg shadow-lg bg-white">
