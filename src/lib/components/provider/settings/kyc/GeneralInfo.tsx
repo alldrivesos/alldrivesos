@@ -50,15 +50,15 @@ const GeneralInfo: FC<Props> = ({ next, prevKyc, isLoading }) => {
       setValue("address", place.formatted_address || "");
       setValue(
         "business_state",
-        getStateFromGoogle(place.address_components || [])
+        getStateFromGoogle(place.address_components || []),
       );
       setValue(
         "business_city",
-        getCityFromGoogle(place.address_components || [])
+        getCityFromGoogle(place.address_components || []),
       );
       setValue(
         "business_postal_code",
-        getPostalCodeFromGoogle(place.address_components || [])
+        getPostalCodeFromGoogle(place.address_components || []),
       );
     },
   });
@@ -433,15 +433,23 @@ const GeneralInfo: FC<Props> = ({ next, prevKyc, isLoading }) => {
                 {showTinTooltip && (
                   <div className="mt-2 p-4 bg-gray-50 border border-gray-200 rounded text-sm text-gray-700 leading-relaxed">
                     <p className="fw-700 mb-1">TIN Collection Notice</p>
-                    <p className="fw-600 mb-2">Tax Identification Number Requirement</p>
+                    <p className="fw-600 mb-2">
+                      Tax Identification Number Requirement
+                    </p>
                     <p>
-                      AllDrive SOS collects your Tax Identification Number (TIN) as part of our identity
-                      verification and tax compliance process. If you provide services and receive payments
-                      through the platform, federal law requires us to collect tax information, verify
-                      contractor identity, and report eligible earnings to the Internal Revenue Service (IRS),
-                      including issuing Form 1099-NEC where applicable. Your information is collected solely
-                      for compliance, payment processing, fraud prevention, and regulatory obligations, and is
-                      handled using industry-standard security controls.
+                      AllDrive SOS collects your Tax Identification Number (TIN)
+                      as part of our identity verification and tax compliance
+                      process.
+                      <br /> If you provide services and receive payments
+                      through the platform, federal law requires us to collect
+                      tax information, verify contractor identity, and report
+                      eligible earnings to the Internal Revenue Service (IRS),
+                      including issuing Form 1099-NEC where applicable.
+                      <br />
+                      Your information is collected solely for compliance,
+                      payment processing, fraud prevention, and regulatory
+                      obligations, and is handled using industry-standard
+                      security controls.
                     </p>
                   </div>
                 )}

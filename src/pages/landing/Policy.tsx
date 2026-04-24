@@ -76,7 +76,7 @@ const PolicyPage = () => {
     },
     {
       label: "Payment Settlement",
-      key: 17,
+      key: 16,
     },
   ];
 

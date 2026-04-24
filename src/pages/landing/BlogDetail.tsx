@@ -8,6 +8,7 @@ import { TbArrowBackUpDouble } from "react-icons/tb";
 import RelatedNews from "../../lib/components/landing/blog/related-news";
 import useAuth from "../../lib/hooks/authUser";
 import BlogComments from "./BlogComments";
+import { BsClock } from "react-icons/bs";
 
 const BlogDetail = () => {
   const { id } = useParams();
@@ -22,6 +23,21 @@ const BlogDetail = () => {
   return (
     <>
       <LandingLayout>
+        <div className="h-[250px] lg:h-[300px]  bg-[url('https://res.cloudinary.com/greenmouse-tech/image/upload/v1705679269/rsh/Group_59_7_fv41oc.png')] bg-cover lg:bg-fit">
+          <div className="box h-full text-white flex items-center">
+            <div>
+              <div className="flex">
+                <div className="border-2 flex items-center gap-2 text-white px-3 py-2 rounded-[100px] border-[#FEB470]">
+                  <BsClock className="text-[#FEB470] text-[14px]" />
+                  <p className="fs-200 md:fs-300 lg:fs-400 fw-500 text-[#FEB470]">
+                    Available 24/7 for emergency road service
+                  </p>
+                </div>
+              </div>
+              <p className="text-4xl fw-700 mt-5">Latest News</p>
+            </div>
+          </div>
+        </div>
         {isLoading && (
           <div className="place-center py-16">
             <div>
