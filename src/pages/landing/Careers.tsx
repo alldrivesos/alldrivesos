@@ -83,15 +83,15 @@ const CareersPage = () => {
                   ))}
                 </div>
               </div>
-              <div className="mt-6 lg:flex gap-8 lg:mt-16">
-                <div className="lg:w-6/12 relative">
+              <div className="mt-6 flex flex-col  gap-8 lg:mt-16">
+                <div className=" relative">
                   <img
                     src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1722434847/rsh/Gemini_Generated_Image_a5w19ea5w19ea5w1_pu9ydi.jpg"
                     alt="image"
-                    className="w-full max-h-[470px] top-0 absolute object-cover rounded-2xl"
+                    className="h-[570px] w-full rounded-lg"
                   />
                 </div>
-                <div className="mt-5 flex flex-col lg:mt-0 lg:w-6/12">
+                <div className="mt-5 flex flex-col lg:mt-16">
                   <p className="text-xl lg:text-3xl fw-600">
                     Join AllDrive SOS and Expand Your Business Today!
                   </p>
@@ -280,9 +280,9 @@ const CareersPage = () => {
                               <p className="mt-1">
                                 Policies must include a Waiver of Subrogation in
                                 favor of ALLDRIVE SOS LLC — your insurance
-                                company agrees not to pursue legal action against
-                                AllDrive SOS LLC to recover claim payments made
-                                under your policy.
+                                company agrees not to pursue legal action
+                                against AllDrive SOS LLC to recover claim
+                                payments made under your policy.
                               </p>
                             </li>
 
