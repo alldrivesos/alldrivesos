@@ -151,98 +151,223 @@ const CareersPage = () => {
                           </span>
                         </div>
                         <div className="mt-3 w-full">
+                          <p className="mb-3">
+                            All independent service providers must maintain
+                            active insurance coverage meeting the requirements
+                            below at all times while providing services.
+                          </p>
                           <ul
-                            className="flex flex-col gap-3"
+                            className="flex flex-col gap-5"
                             style={{ listStyle: "circle" }}
                           >
                             <li>
                               <span className="fw-700">
-                                Certificate of Insurance
+                                1. Certificate of Insurance (COI)
                               </span>
-                              : Hold active Commercial General Liability and
-                              Commercial Automobile Insurance from a reputable
-                              insurance company with an A- or better rating from
-                              <a
-                                href="https://web.ambest.com/home"
-                                target="_blank"
-                              >
-                                {" "}
-                                <span className="underline">A.M. BEST</span>
-                              </a>
+                              <p className="mt-1">
+                                Service providers must maintain insurance issued
+                                by an insurer rated A- or better by{" "}
+                                <a
+                                  href="https://web.ambest.com/home"
+                                  target="_blank"
+                                  className="underline"
+                                >
+                                  A.M. Best
+                                </a>{" "}
+                                and submit a valid Certificate of Insurance
+                                (COI) prior to activation on the platform.
+                              </p>
+                            </li>
+
+                            <li>
+                              <span className="fw-700">
+                                2. Required Coverage — Roadside / Soft Services
+                              </span>
+                              <p className="mt-1 text-sm text-gray-600">
+                                Includes jump starts, lockouts, tire changes,
+                                fuel delivery, battery installation, minor
+                                roadside assistance.
+                              </p>
                               <ul
-                                className="md:mx-6 flex flex-col gap-3 my-3"
+                                className="md:mx-6 mx-3 flex flex-col gap-2 mt-2"
                                 style={{ listStyle: "disc" }}
                               >
                                 <li>
                                   <span className="fw-700">
-                                    For roadside/soft services
+                                    Commercial General Liability (CGL)
                                   </span>
-                                  :
                                   <ul
-                                    className="md:mx-9 mx-3 flex flex-col gap-3 my-2"
+                                    className="md:mx-6 mx-3 flex flex-col gap-1 mt-1"
                                     style={{ listStyle: "disc" }}
                                   >
-                                    <li>
-                                      <span className="fw-500">
-                                        Commercial General Liability Insurance:
-                                        Minimum $1,000,000
-                                      </span>
-                                    </li>
-                                    <li>
-                                      <span className="fw-500">
-                                        Commercial Automobile Insurance: Minimum
-                                        $1,000,000
-                                      </span>
-                                    </li>
+                                    <li>Minimum: $1,000,000 per occurrence</li>
+                                    <li>$2,000,000 aggregate recommended</li>
                                   </ul>
                                 </li>
-
                                 <li>
                                   <span className="fw-700">
-                                    Towing Services
+                                    Commercial Automobile Liability
                                   </span>
-                                  :
                                   <ul
-                                    className="md:mx-9 mx-3 flex flex-col gap-3 mt-2"
+                                    className="md:mx-6 mx-3 flex flex-col gap-1 mt-1"
                                     style={{ listStyle: "disc" }}
                                   >
                                     <li>
-                                      <span className="fw-500">
-                                        On-Hook Insurance: Minimum $100,000
-                                      </span>
+                                      Minimum: $1,000,000 combined single limit
                                     </li>
                                     <li>
-                                      <span className="fw-500">
-                                        Garage Keepers Legal Liability Insurance
-                                        (if you provide storage services):
-                                        Minimum $100,000
-                                      </span>
+                                      Applies to owned, hired, and non-owned
+                                      vehicles
                                     </li>
                                   </ul>
                                 </li>
                               </ul>
                             </li>
+
                             <li>
-                              <span className="fw-700">Additional Insured</span>
-                              : ALLDRIVE SOS LLC must be included as an
-                              additional insured on both your Commercial General
-                              Liability and Commercial Automobile insurance
-                              policies.
+                              <span className="fw-700">
+                                3. Required Coverage — Towing Providers
+                              </span>
+                              <ul
+                                className="md:mx-6 mx-3 flex flex-col gap-2 mt-2"
+                                style={{ listStyle: "disc" }}
+                              >
+                                <li>
+                                  <span className="fw-700">
+                                    Commercial General Liability
+                                  </span>
+                                  : Minimum $1,000,000 per occurrence
+                                </li>
+                                <li>
+                                  <span className="fw-700">
+                                    Commercial Automobile Liability
+                                  </span>
+                                  : Minimum $1,000,000 combined single limit
+                                </li>
+                                <li>
+                                  <span className="fw-700">
+                                    On-Hook Coverage
+                                  </span>
+                                  : Minimum $100,000 per vehicle
+                                </li>
+                                <li>
+                                  <span className="fw-700">
+                                    Garage Keepers Legal Liability
+                                  </span>{" "}
+                                  (Required if vehicles are stored, held
+                                  overnight, or transported to yards): Minimum
+                                  $100,000
+                                </li>
+                              </ul>
                             </li>
+
                             <li>
-                              <span className="fw-700">Proof of Insurance</span>
-                              : Submit a certificate of insurance that satisfies
-                              the requirements above.
+                              <span className="fw-700">
+                                4. Additional Insured Requirement
+                              </span>
+                              <p className="mt-1">
+                                ALLDRIVE SOS LLC must be listed as Additional
+                                Insured and Primary and Non-Contributory on both
+                                your Commercial General Liability and Commercial
+                                Automobile policies.
+                              </p>
                             </li>
+
                             <li>
-                              <span className="fw-700">Policy Renewal</span>:
-                              When your insurance policies are renewed, you must
-                              provide ALLDRIVE SOS LLC with an updated
-                              certificate of insurance. You can do this by
-                              logging into your account and updating your KYC
-                              information under the "Settings" tab.
+                              <span className="fw-700">
+                                5. Waiver of Subrogation
+                              </span>
+                              <p className="mt-1">
+                                Policies must include a Waiver of Subrogation in
+                                favor of ALLDRIVE SOS LLC — your insurance
+                                company agrees not to pursue legal action against
+                                AllDrive SOS LLC to recover claim payments made
+                                under your policy.
+                              </p>
+                            </li>
+
+                            <li>
+                              <span className="fw-700">
+                                6. Policy Cancellation / Material Change Notice
+                              </span>
+                              <p className="mt-1">
+                                Insurance carriers must provide at least 30
+                                days' written notice to ALLDRIVE SOS LLC prior
+                                to cancellation, non-renewal, or material
+                                coverage change.
+                              </p>
+                            </li>
+
+                            <li>
+                              <span className="fw-700">
+                                7. Proof of Insurance
+                              </span>
+                              <p className="mt-1">
+                                Providers must upload a valid Certificate of
+                                Insurance through their AllDrive SOS account
+                                prior to accepting service requests. AllDrive
+                                SOS reserves the right to verify coverage
+                                directly with insurers and suspend accounts with
+                                expired or insufficient insurance.
+                              </p>
+                            </li>
+
+                            <li>
+                              <span className="fw-700">
+                                8. Policy Renewal Requirement
+                              </span>
+                              <p className="mt-1">
+                                Service providers must maintain continuous
+                                coverage. Updated Certificates of Insurance must
+                                be uploaded upon renewal via{" "}
+                                <span className="fw-500">
+                                  Account → Settings → KYC Information
+                                </span>
+                                . Failure to maintain active insurance may
+                                result in immediate suspension or removal from
+                                the platform.
+                              </p>
+                            </li>
+
+                            <li>
+                              <span className="fw-700">
+                                9. Umbrella / Excess Liability Insurance
+                                (Recommended)
+                              </span>
+                              <p className="mt-1">
+                                Service providers are strongly encouraged to
+                                maintain Umbrella or Excess Liability Insurance
+                                with limits of at least $1,000,000, providing
+                                additional coverage above primary policy limits.
+                              </p>
                             </li>
                           </ul>
+
+                          <div className="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-md">
+                            <p className="fw-700 text-[#172748]">
+                              Need to Upgrade Your Insurance to Meet AllDrive
+                              SOS Requirements?
+                            </p>
+                            <p className="mt-2">
+                              Download our official Insurance Requirements
+                              document and send it directly to your insurance
+                              agent to request the necessary endorsements.
+                            </p>
+                            <a
+                              href="https://docs.google.com/document/d/1zVSn3YEdjNBz-_ph0Y0n0EiHEHh04KqL/edit"
+                              target="_blank"
+                              className="inline-block mt-3 text-blue-700 underline fw-500"
+                            >
+                              Download the AllDrive SOS Insurance Requirements
+                              (.DOCX)
+                            </a>
+                            <p className="mt-3 text-sm text-gray-500">
+                              Disclaimer: AllDrive SOS LLC does not provide
+                              insurance, legal, or financial advice; service
+                              providers should consult their licensed insurance
+                              professional to determine appropriate coverage.
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>

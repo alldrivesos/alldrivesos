@@ -96,9 +96,9 @@ const PolicyPage = () => {
         </li>
         <li>
           <span className="fw-500">Payment Information: </span> We do not store
-          your full credit card details. Payment information is processed
-          securely by our third-party payment gateway partners. We only store
-          anonymized transaction details for record-keeping purposes.
+          your full payment details. Payment information is processed securely
+          by our third-party payment gateway partners. We only store anonymized
+          transaction details for record-keeping purposes.
         </li>
         <li>
           <span className="fw-500">Service Usage Information: </span> This
@@ -120,6 +120,25 @@ const PolicyPage = () => {
           payment processors. These services might collect their own data based
           on their privacy policies.
         </li>
+        <li>
+          <span className="fw-500">
+            C. Identity and Tax Verification Information (Service Providers
+            Only):{" "}
+          </span>
+          When service providers register on the platform, we may collect
+          information necessary for identity verification, payment processing,
+          and tax compliance, including:
+          <ul className="mt-2 ml-4 flex flex-col gap-1" style={{ listStyle: "disc" }}>
+            <li>Tax-related information</li>
+            <li>Legal name and business name</li>
+            <li>Physical address and contact details</li>
+            <li>Payment and financial account information</li>
+            <li>
+              Identity verification documents (where required for compliance
+              purposes)
+            </li>
+          </ul>
+        </li>
       </ul>
     </div>
   );
@@ -128,8 +147,8 @@ const PolicyPage = () => {
     <div className="mt-4 text-lg" ref={(el) => (divRefs.current[2] = el)}>
       <p className="mt-5 fw-600">How We Use Your Information</p>
       <p className="">
-        We use the information we collect for various purposes, all aimed at
-        improving your experience on the ALLDRIVE SOS Platform:
+        We use collected information to operate and improve the platform,
+        including:
       </p>
 
       <ul className="mt-3 my-list">
@@ -394,9 +413,16 @@ const PolicyPage = () => {
     <div className="mt-4 text-lg" ref={(el) => (divRefs.current[11] = el)}>
       <p className="mt-5 fw-600">Data Retention</p>
       <p className="">
-        We retain your personal information for as long as necessary to fulfill
-        the purposes outlined in this Privacy Policy, unless a longer retention
-        period is required or permitted by law.
+        We retain information only as long as necessary to:
+      </p>
+      <ul className="mt-2 ml-4 flex flex-col gap-1" style={{ listStyle: "disc" }}>
+        <li>Provide services</li>
+        <li>Comply with legal, tax, and regulatory obligations</li>
+        <li>Resolve disputes</li>
+        <li>Enforce agreements</li>
+      </ul>
+      <p className="mt-2">
+        Retention periods may vary depending on applicable laws.
       </p>
     </div>
   );
@@ -504,13 +530,12 @@ const PolicyPage = () => {
               <div className="lg:flex gap-8">
                 <div className="box flex flex-col lg:w-8/12 md:w-6/12 w-full">
                   <p className="text-lg">
-                    Welcome to ALLDRIVE SOS! This Privacy Policy describes how
-                    we collect, use, and disclose your personal information when
-                    you access or use our web and mobile platform ("Platform").
-                    We are committed to protecting your privacy and ensuring the
-                    security of your data. By accessing or using the Platform,
-                    you agree to this Privacy Policy. If you disagree with any
-                    part of this policy, please refrain from using our services.
+                    We collect information necessary to operate, maintain, and
+                    secure the ALLDRIVE SOS Platform and to comply with legal,
+                    regulatory, and operational requirements. By accessing or
+                    using the Platform, you agree to this Privacy Policy. If you
+                    disagree with any part of this policy, please refrain from
+                    using our services.
                   </p>
 
                   <div className="w-full lg:w-3/4 mt-8 border border-2 rounded-md py-4 px-6 flex flex-col gap-6">
