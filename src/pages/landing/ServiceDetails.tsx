@@ -10,11 +10,7 @@ const PROVIDER = {
   url: "https://www.roadsideheroes.ng",
 };
 
-const AREA_SERVED = [
-  { "@type": "AdministrativeArea", name: "MaryLand" },
-  { "@type": "AdministrativeArea", name: "Virginia" },
-  { "@type": "AdministrativeArea", name: "Washington" },
-];
+const AREA_SERVED = [];
 
 // Shared content for SEO-rich pages
 const PLATFORM_BENEFITS = [
@@ -123,20 +119,7 @@ type ServiceData = {
   seo?: SeoContent;
 };
 
-const DMV_AREAS = [
-  {
-    region: "Maryland",
-    cities: "Baltimore, Silver Spring, Rockville, Columbia, Gaithersburg",
-  },
-  {
-    region: "Washington DC",
-    cities: "Downtown, Capitol Hill, Northwest, Northeast",
-  },
-  {
-    region: "Virginia",
-    cities: "Arlington, Alexandria, Fairfax, Tysons, Reston",
-  },
-];
+const DMV_AREAS = [];
 
 const services: ServiceData[] = [
   {
@@ -153,7 +136,6 @@ const services: ServiceData[] = [
       "Digital pressure gauge calibrated to manufacturer spec",
       "All four tires checked and balanced",
       "Quick visual inspection included",
-      "Available 24/7 across Maryland, Virginia & Washington",
     ],
     seo: {
       title:
@@ -194,7 +176,7 @@ const services: ServiceData[] = [
           "You can request help anytime and get connected with someone nearby who is ready to respond.",
       },
       areaSection: {
-        heading: "Tire Pump Service in Maryland, DC, and Virginia",
+        heading: "Tire Pump Service Nationwide",
         areas: DMV_AREAS,
         footer:
           "If you need tire air near you, you can quickly find available technicians in your area.",
@@ -287,7 +269,7 @@ const services: ServiceData[] = [
           "You can request help anytime and get connected with someone nearby who is ready to respond.",
       },
       areaSection: {
-        heading: "Battery Installation Service in Maryland, DC, and Virginia",
+        heading: "Battery Installation Service Nationwide",
         areas: DMV_AREAS,
         footer:
           "If you need emergency battery replacement near you, you can quickly find available technicians in your area.",
@@ -338,7 +320,8 @@ const services: ServiceData[] = [
       "Lug nut inspection and wheel safety check",
     ],
     seo: {
-      title: "Mobile Tire Change Service Near You | Flat Tire Help | AllDrive SOS",
+      title:
+        "Mobile Tire Change Service Near You | Flat Tire Help | AllDrive SOS",
       intro:
         "A flat tire can stop your day instantly. AllDrive SOS connects you with nearby roadside technicians who provide on-site tire change service at your location. Skip searching for help — request service, receive competitive quotes, and choose a technician who can get you moving again.",
       searchSection: {
@@ -380,7 +363,7 @@ const services: ServiceData[] = [
           "You can request help anytime and get connected with someone nearby ready to respond.",
       },
       areaSection: {
-        heading: "Tire Change Service in Maryland, DC, and Virginia",
+        heading: "Tire Change Service Nationwide",
         areas: DMV_AREAS,
         footer:
           "If you need flat tire help near you, you can quickly find available technicians in your area.",
@@ -454,7 +437,7 @@ const services: ServiceData[] = [
           "You can request help anytime and get connected with someone nearby who can respond quickly.",
       },
       areaSection: {
-        heading: "Fuel Delivery in Maryland, DC, and Virginia",
+        heading: "Fuel Delivery Nationwide",
         areas: DMV_AREAS,
         footer:
           "If you need gas delivery near you, you can quickly connect with available technicians in your area.",
@@ -547,7 +530,7 @@ const services: ServiceData[] = [
           "You can request service anytime and get connected with providers ready to respond.",
       },
       areaSection: {
-        heading: "Towing Services in Maryland, DC, and Virginia",
+        heading: "Towing Services Nationwide",
         areas: DMV_AREAS,
         footer:
           "Whether you need emergency towing in Baltimore, 24/7 towing in Bethesda, or a tow truck in Rockville, you can find nearby providers quickly.",
@@ -580,7 +563,8 @@ const services: ServiceData[] = [
       "Works on most makes and models",
     ],
     seo: {
-      title: "Vehicle Lockout Service Near You | Locked Out of Car Help | AllDrive SOS",
+      title:
+        "Vehicle Lockout Service Near You | Locked Out of Car Help | AllDrive SOS",
       intro:
         "Locked out of your vehicle? AllDrive SOS helps you quickly connect with independent roadside assistance providers who can get you back in — without damaging your car. Request service, receive competitive quotes, and choose a provider near you.",
       searchSection: {
@@ -622,7 +606,7 @@ const services: ServiceData[] = [
           "You can request help anytime and get connected with someone nearby ready to respond.",
       },
       areaSection: {
-        heading: "Vehicle Lockout Service in Maryland, DC, and Virginia",
+        heading: "Vehicle Lockout Service Nationwide",
         areas: DMV_AREAS,
         footer:
           "If you need car lockout help near you, you can quickly find available technicians in your area.",
@@ -656,7 +640,8 @@ const services: ServiceData[] = [
       "Safe scene management to protect other road users",
     ],
     seo: {
-      title: "Accident Cleanup Service Near You | Roadside Debris Removal | AllDrive SOS",
+      title:
+        "Accident Cleanup Service Near You | Roadside Debris Removal | AllDrive SOS",
       intro:
         "After a vehicle collision or roadway incident, debris and fluid spills create dangerous conditions. AllDrive SOS helps you quickly connect with independent providers who can assist with accident cleanup at your location. Request service and get connected with nearby help fast.",
       searchSection: {
@@ -698,7 +683,7 @@ const services: ServiceData[] = [
           "You can request help anytime and get connected with someone nearby ready to respond.",
       },
       areaSection: {
-        heading: "Accident Cleanup Service in Maryland, DC, and Virginia",
+        heading: "Accident Cleanup Service Nationwide",
         areas: DMV_AREAS,
         footer:
           "If you need accident cleanup near you, you can quickly find available providers in your area.",
@@ -774,7 +759,7 @@ const services: ServiceData[] = [
           "These services are designed to protect vehicles with custom finishes, sensitive suspension, and high value.",
       },
       areaSection: {
-        heading: "Exotic Car Transport in Maryland, DC, and Virginia",
+        heading: "Exotic Car Transport Nationwide",
         areas: DMV_AREAS,
         footer:
           "Whether you need exotic car transport in Baltimore, luxury car transport in Silver Spring, or enclosed car transport in Maryland, you can find nearby providers quickly.",
@@ -852,24 +837,8 @@ const services: ServiceData[] = [
           "Instead of risking damage by continuing to drive, you can request assistance and connect with nearby help quickly.",
       },
       areaSection: {
-        heading: "24/7 Vehicle Fluid Assistance in Maryland, DC & Virginia",
-        areas: [
-          {
-            region: "Maryland",
-            cities:
-              "Baltimore • Silver Spring • Rockville • Columbia • Bethesda • Gaithersburg",
-          },
-          {
-            region: "Washington DC",
-            cities:
-              "Downtown DC • Capitol Hill • Northwest • Northeast • Southwest DC",
-          },
-          {
-            region: "Northern Virginia",
-            cities:
-              "Arlington • Alexandria • Fairfax • Tysons • Reston • Falls Church",
-          },
-        ],
+        heading: "24/7 Vehicle Fluid Assistance Nationwide",
+        areas: [],
         footer:
           "Whether you need a coolant top-up in Silver Spring, engine fluid service in Rockville, or roadside fluid assistance in Columbia, nearby help can be requested in minutes.",
       },
@@ -962,7 +931,7 @@ const services: ServiceData[] = [
           "You can request help anytime and get connected with someone ready to assist.",
       },
       areaSection: {
-        heading: "Jump Start Service in Maryland, DC, and Virginia",
+        heading: "Jump Start Service Nationwide",
         areas: DMV_AREAS,
         footer:
           "If you need a jump start near you, you can quickly find available technicians in your area.",
@@ -986,7 +955,9 @@ export default function ServiceDetails() {
   const navigate = useNavigate();
   const decoded_name = decodeURIComponent(name ?? "");
   const toSlug = (s: string) => s.trim().toLowerCase().replace(/\s+/g, "-");
-  const service = services.find((s) => toSlug(s.name) === decoded_name.toLowerCase());
+  const service = services.find(
+    (s) => toSlug(s.name) === decoded_name.toLowerCase(),
+  );
 
   const schema = service
     ? {
@@ -1215,14 +1186,7 @@ export default function ServiceDetails() {
             <h2 className="text-2xl lg:text-3xl fw-700 mb-8">
               {s.areaSection.heading}
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {s.areaSection.areas.map((area, i) => (
-                <div key={i}>
-                  <p className="fw-700 text-[#FEB470] mb-2">{area.region}</p>
-                  <p className="fs-400 text-gray-300">{area.cities}</p>
-                </div>
-              ))}
-            </div>
+
             <p className="mt-8 fs-500 text-gray-300">{s.areaSection.footer}</p>
           </div>
         </div>
@@ -1396,8 +1360,8 @@ export default function ServiceDetails() {
             Need {service.name} Right Now?
           </p>
           <p className="mt-3 fs-500 lg:w-6/12 mx-auto text-white/80">
-            Our technicians are on standby across Maryland, Virginia,
-            Washington. Request help in under a minute.
+            Our technicians are on standby Nationwide Request help in under a
+            minute.
           </p>
           <button
             onClick={() => navigate(`/request/${service.id}`)}

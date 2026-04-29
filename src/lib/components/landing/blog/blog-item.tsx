@@ -16,7 +16,9 @@ const BlogItem: FC<Props> = ({ data }) => {
     <div>
       <div
         onClick={() =>
-          navigate(`/blog/detail?title=${encodeURIComponent(data.title.replaceAll(" ", "-"))}`)
+          navigate(
+            `/blog/detail?title=${encodeURIComponent(data.title.replaceAll(" ", "-"))}`,
+          )
         }
         className="cursor-pointer"
       >
@@ -42,7 +44,11 @@ const BlogItem: FC<Props> = ({ data }) => {
         <div className="flex justify-end">
           <button
             className="flex gap-x-3 items-center !syne hover:fw-600 hover:text-primary"
-            onClick={() => navigate(`/blog/detail?title=${encodeURIComponent(data.title.replaceAll(" ", "-"))}`)}
+            onClick={() =>
+              navigate(
+                `/blog/detail?title=${encodeURIComponent(data.title.replaceAll(" ", "-"))}`,
+              )
+            }
           >
             View <FaArrowRightLong />
           </button>
