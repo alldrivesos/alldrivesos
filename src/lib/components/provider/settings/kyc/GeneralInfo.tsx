@@ -417,7 +417,7 @@ const GeneralInfo: FC<Props> = ({ next, prevKyc, isLoading }) => {
                       label="Tax Identification Number"
                       labelClassName="text-[#000000B2] fw-500"
                       error={errors.tin?.message}
-                      type={InputType.text}
+                      type={InputType.password}
                       {...field}
                       ref={null}
                     />
@@ -603,9 +603,14 @@ const GeneralInfo: FC<Props> = ({ next, prevKyc, isLoading }) => {
               providing services.
             </p>
             <div className="mt-3 w-full">
-              <ul className="flex flex-col gap-5" style={{ listStyle: "circle" }}>
+              <ul
+                className="flex flex-col gap-5"
+                style={{ listStyle: "circle" }}
+              >
                 <li>
-                  <span className="fw-700">1. Certificate of Insurance (COI)</span>
+                  <span className="fw-700">
+                    1. Certificate of Insurance (COI)
+                  </span>
                   <p className="mt-1">
                     Service providers must maintain insurance issued by an
                     insurer rated A- or better by{" "}
@@ -669,8 +674,10 @@ const GeneralInfo: FC<Props> = ({ next, prevKyc, isLoading }) => {
                     style={{ listStyle: "disc" }}
                   >
                     <li>
-                      <span className="fw-700">Commercial General Liability</span>:
-                      Minimum $1,000,000 per occurrence
+                      <span className="fw-700">
+                        Commercial General Liability
+                      </span>
+                      : Minimum $1,000,000 per occurrence
                     </li>
                     <li>
                       <span className="fw-700">
@@ -693,7 +700,9 @@ const GeneralInfo: FC<Props> = ({ next, prevKyc, isLoading }) => {
                 </li>
 
                 <li>
-                  <span className="fw-700">4. Additional Insured Requirement</span>
+                  <span className="fw-700">
+                    4. Additional Insured Requirement
+                  </span>
                   <p className="mt-1">
                     ALLDRIVE SOS LLC must be listed as Additional Insured and
                     Primary and Non-Contributory on both your Commercial General

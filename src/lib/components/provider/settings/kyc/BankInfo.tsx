@@ -186,7 +186,7 @@ const BankInfo: FC<Props> = ({ prev }) => {
                   label="Social Security Number"
                   labelClassName="text-[#000000B2] fw-500"
                   error={errors.tax_id?.message}
-                  type={InputType.text}
+                  type={InputType.password}
                   {...field}
                   ref={null}
                 />
