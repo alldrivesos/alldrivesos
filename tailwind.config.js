@@ -27,7 +27,7 @@ module.exports = withMT({
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
   // plugins: [require("daisyui")],
   // daisyui: {
   //   styled: false, // enable component classes (btn, card, etc.)

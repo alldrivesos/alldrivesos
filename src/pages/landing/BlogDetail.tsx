@@ -9,6 +9,9 @@ import RelatedNews from "../../lib/components/landing/blog/related-news";
 import useAuth from "../../lib/hooks/authUser";
 import BlogComments from "./BlogComments";
 import { BsClock } from "react-icons/bs";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 const BlogDetail = () => {
   const { id } = useParams();
@@ -65,20 +68,10 @@ const BlogDetail = () => {
                 </p>
                 <div>
                   <p className="text-2xl fw-600 !syne">{data?.data?.title}</p>
-                  {/* <div>
-                    <p className="f-500">
-                      By: {data?.user.firstName} {data?.user.lastName}
-                    </p>
-                  </div> */}
                   <div className="flex gap-x-2 items-center mt-3">
-                    {/* {data?.tags.map((item: any) => ( */}
-                    <p
-                      className="px-2 py-[2px] bg-blue-50 fw-500 rounded-xl fs-400"
-                      // key={item.id}
-                    >
+                    <p className="px-2 py-[2px] bg-blue-50 fw-500 rounded-xl fs-400">
                       {data?.data?.category?.name}
                     </p>
-                    {/* ))} */}
                   </div>
                 </div>
                 <div className="mt-7">
@@ -89,12 +82,13 @@ const BlogDetail = () => {
                       className="w-full xl:h-[450px] 2xl:h-[550px] object-contain"
                     />
                   </div>
-                  <div className="mt-16">
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: `${data?.data?.body}`,
-                      }}
-                    />
+                  <div className="mt-16 prose prose-lg max-w-none prose-headings:font-semibold prose-a:text-blue-600 prose-img:rounded-lg">
+                    <ReactMarkdown
+                      remarkPlugins={[remarkGfm]}
+                      rehypePlugins={[rehypeRaw]}
+                    >
+                      {data?.data?.body}
+                    </ReactMarkdown>
                   </div>
                   <div className="mt-3">
                     {user.token !== "" && <BlogComments id={id} />}
