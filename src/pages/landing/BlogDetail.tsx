@@ -82,13 +82,16 @@ const BlogDetail = () => {
                       className="w-full xl:h-[450px] 2xl:h-[550px] object-contain"
                     />
                   </div>
-                  <div className="mt-16 prose prose-lg max-w-none prose-headings:font-semibold prose-a:text-blue-600 prose-img:rounded-lg">
-                    <ReactMarkdown
+                  <div className="mt-16 prose prose-sm max-w-none prose-headings:font-semibold prose-a:text-blue-600 prose-img:rounded-lg">
+                    <div
+                      dangerouslySetInnerHTML={{ __html: data.data.body }}
+                    ></div>
+                    {/*<ReactMarkdown
                       remarkPlugins={[remarkGfm]}
                       rehypePlugins={[rehypeRaw]}
                     >
                       {data?.data?.body}
-                    </ReactMarkdown>
+                    </ReactMarkdown>*/}
                   </div>
                   <div className="mt-3">
                     {user.token !== "" && <BlogComments id={id} />}
