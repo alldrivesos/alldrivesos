@@ -58,7 +58,8 @@ const Footer = () => {
       <div className="box text-white">
         <div className="lg:pt-20 py-12 lg:grid lg:grid-cols-6">
           <div className="col-span-2">
-            <img
+            <link
+              to="/"
               src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1706192917/rsh/Group_48097864_1_mopmlj.png"
               alt="logo"
               className="w-8/12 lg:w-6/12"
