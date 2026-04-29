@@ -115,6 +115,7 @@ type ServiceData = {
   id: string;
   name: string;
   icon: string;
+  image?: string;
   serviceType: string;
   tagline: string;
   description: string;
@@ -142,6 +143,7 @@ const services: ServiceData[] = [
     id: "a9087c16-a32d-4778-ab0b-ed8a4b67ac6f",
     name: "Tire Pump",
     icon: "https://res.cloudinary.com/yhomi1996/image/upload/v1729086038/iren1aynqfudfb6jqdgc.png",
+    image: "/services/tire_pump.png",
     serviceType: "Tire Inflation",
     tagline: "Back to the right pressure — wherever you are.",
     description:
@@ -213,6 +215,7 @@ const services: ServiceData[] = [
     id: "1800ae3f-be16-49e9-b056-9c30a9414a2c",
     name: "Mobile Motorcycle Repair",
     icon: "https://res.cloudinary.com/yhomi1996/image/upload/v1731593805/d7qujx3dnt8l9zbf6gfp.png",
+    image: "/services/mobile_mechanic.png",
     serviceType: "Motorcycle Repair",
     tagline: "Your bike breaks down — our tech shows up.",
     description:
@@ -229,22 +232,83 @@ const services: ServiceData[] = [
     id: "25cc0925-b325-4721-801b-3b983361fce8",
     name: "Battery Installation",
     icon: "https://res.cloudinary.com/yhomi1996/image/upload/v1729085889/udkfzjvsq8ggkxr91rhp.png",
+    image: "/services/battery_installation.png",
     serviceType: "Car Battery Replacement",
-    tagline: "New battery. Installed at your door.",
+    tagline: "New battery. Installed at your location.",
     description:
-      "A flat battery often strikes without warning — especially in the heat of a  afternoon. Rather than calling a tow or hunting for a mechanic, we deliver and install a compatible replacement battery directly at your location. Our technician tests your existing battery to confirm it's beyond recovery, then swaps in the right battery for your vehicle and verifies the charging system is healthy before leaving you to drive on.",
+      "A dead battery can disrupt your entire day — whether you're at home, at work, or stranded in a parking lot. AllDrive SOS connects motorists with independent, vetted mobile technicians who can deliver and install a replacement battery at your location. Instead of arranging towing or searching for help, you simply submit a request and a nearby technician is dispatched to assist you directly.",
     features: [
-      "Battery test and diagnosis on-site",
-      "Wide range of battery brands and sizes in stock",
-      "Professional installation at your location",
-      "Charging system check post-installation",
-      "Old battery safely disposed of",
+      "On-site battery testing and diagnostics",
+      "Delivery and installation of a replacement battery",
+      "Battery terminal cleaning and inspection",
+      "Electrical system start-up checks",
+      "Compatibility support for most vehicle types",
     ],
+    seo: {
+      title: "Mobile Battery Installation Near You | AllDrive SOS",
+      intro:
+        "A dead battery can stop your day instantly. AllDrive SOS connects you with nearby mobile technicians who deliver and install a replacement battery at your location — no tow, no waiting at a shop. Submit a request, get competitive quotes, and choose a provider who can respond fast.",
+      searchSection: {
+        heading: "On-Site Car Battery Replacement — Anywhere You Are",
+        keywords: [
+          "mobile battery installation service",
+          "emergency car battery replacement near me",
+          "on-site battery installation",
+          "mobile vehicle battery replacement USA",
+          "same day car battery installation",
+          "battery delivery and installation at home",
+        ],
+        text: "If you're searching for mobile battery installation or emergency car battery replacement near me, AllDrive SOS gives you a faster way to get help. Technicians in our network can come to your location, test your battery, and install a compatible replacement on the spot.",
+      },
+      whenToUse: {
+        heading: "When to Request Battery Installation",
+        situations: [
+          "Vehicle won't start due to a dead or failing battery",
+          "Battery is too old or damaged to hold a charge",
+          "Roadside breakdown caused by battery failure",
+          "Need same-day battery replacement at home or work",
+          "Stranded in a parking lot without tools",
+          "Emergency battery failure during travel",
+        ],
+        footer:
+          "Instead of arranging a tow, request mobile battery installation and get help where you are.",
+      },
+      offersSection: {
+        heading: "Emergency Battery Replacement Service",
+        intro:
+          "When your battery dies unexpectedly, time matters. AllDrive SOS connects you with technicians who offer:",
+        offers: [
+          "On-site battery testing and diagnostics",
+          "Delivery and installation of a replacement battery",
+          "Battery terminal cleaning and inspection",
+          "Fast alternative to towing or jump-starts",
+        ],
+        footer:
+          "You can request help anytime and get connected with someone nearby who is ready to respond.",
+      },
+      areaSection: {
+        heading: "Battery Installation Service in Maryland, DC, and Virginia",
+        areas: DMV_AREAS,
+        footer:
+          "If you need emergency battery replacement near you, you can quickly find available technicians in your area.",
+      },
+      whySection: {
+        heading: "Why Use AllDrive SOS",
+        footer:
+          "You get fast, on-site battery help without unnecessary towing delays or shop wait times.",
+      },
+      cta: {
+        heading: "Request Battery Installation Now",
+        text: "Don't let a dead battery ruin your day. Request mobile battery installation through AllDrive SOS and connect with nearby technicians in minutes. Compare quotes, choose your provider, and track their arrival — all in one place.",
+        buttonLabel: "Request Battery Installation",
+      },
+    },
   },
   {
     id: "45404df6-0695-45bf-8e37-4f824f28b551",
     name: "Winch-Out Rescue",
     icon: "https://res.cloudinary.com/yhomi1996/image/upload/v1731593865/yelayvxsehv0aurvnlux.png",
+    image: "/services/winch_out.png",
     serviceType: "Vehicle Recovery",
     tagline: "Stuck in the mud? We'll pull you free.",
     description:
@@ -261,22 +325,83 @@ const services: ServiceData[] = [
     id: "e2502deb-a9d0-4c8f-bb8f-577bba12cdca",
     name: "Tire Change",
     icon: "https://res.cloudinary.com/yhomi1996/image/upload/v1729085774/ympmhkckun00z982oqvo.png",
+    image: "/services/tire_change.png",
     serviceType: "Flat Tire Repair",
     tagline: "Flat tire, fast fix — right where you are.",
     description:
-      "A flat tire at the side of a busy road is one of the most common — and most avoidable — delays on  roads. Our roadside tire change technicians arrive with all the equipment needed to swap your damaged tire for your spare quickly, safely, and without causing further damage to your alloys or wheel studs. We set up proper warning signals, torque your wheel nuts to spec, and check your spare's pressure before calling it done.",
+      "A flat tire can stop your day instantly — whether you're at home, at work, or stranded on the roadside. AllDrive SOS is a nationwide platform that connects motorists with independent, vetted roadside technicians who can assist with tire changes at your location — no tow needed, no long wait.",
     features: [
-      "Rapid flat tire replacement at your location",
-      "Warning signs and safe setup on busy roads",
-      "Alloy-safe wheel removal tools",
-      "Wheel nut torque verified to manufacturer spec",
-      "Spare tire pressure checked before departure",
+      "On-site tire change using your spare tire",
+      "Removal of flat or damaged tire",
+      "Installation and tightening of replacement tire",
+      "Basic tire safety and pressure check",
+      "Lug nut inspection and wheel safety check",
     ],
+    seo: {
+      title: "Mobile Tire Change Service Near You | Flat Tire Help | AllDrive SOS",
+      intro:
+        "A flat tire can stop your day instantly. AllDrive SOS connects you with nearby roadside technicians who provide on-site tire change service at your location. Skip searching for help — request service, receive competitive quotes, and choose a technician who can get you moving again.",
+      searchSection: {
+        heading: "Flat Tire Help — Right Where You Are",
+        keywords: [
+          "mobile tire change service near me",
+          "flat tire roadside assistance nationwide",
+          "emergency tire replacement at home or roadside",
+          "on-site tire change service USA",
+          "24/7 flat tire help roadside service",
+          "mobile tire repair and replacement service",
+        ],
+        text: "If you're searching for mobile tire change service near me, flat tire roadside assistance, or emergency tire replacement, AllDrive SOS gives you a faster way to get help. Technicians in our network can come to your location and swap your flat for your spare — wherever you are.",
+      },
+      whenToUse: {
+        heading: "When to Request Tire Change Service",
+        situations: [
+          "Flat or blown-out tire on the highway",
+          "Tire damaged in a parking lot",
+          "No tools available to change the spare",
+          "Unsafe roadside conditions make DIY difficult",
+          "Emergency roadside breakdown",
+          "Unexpected tire failure during travel",
+        ],
+        footer:
+          "Instead of struggling on the roadside, request mobile tire change service and get help where you are.",
+      },
+      offersSection: {
+        heading: "On-Site Flat Tire Assistance",
+        intro:
+          "When a flat tire strikes, fast help matters. AllDrive SOS connects you with technicians who offer:",
+        offers: [
+          "On-site tire change using your spare",
+          "Flat or damaged tire removal",
+          "Tire safety and pressure check",
+          "Lug nut and wheel safety inspection",
+        ],
+        footer:
+          "You can request help anytime and get connected with someone nearby ready to respond.",
+      },
+      areaSection: {
+        heading: "Tire Change Service in Maryland, DC, and Virginia",
+        areas: DMV_AREAS,
+        footer:
+          "If you need flat tire help near you, you can quickly find available technicians in your area.",
+      },
+      whySection: {
+        heading: "Why Use AllDrive SOS",
+        footer:
+          "You stay safe and in control while getting the tire help you need — without unnecessary delays.",
+      },
+      cta: {
+        heading: "Request Tire Change Service Now",
+        text: "Don't stay stranded on the roadside. Request mobile tire change service through AllDrive SOS and connect with nearby technicians in minutes. Compare quotes, choose your provider, and track their arrival — all in one place.",
+        buttonLabel: "Request Tire Change Service",
+      },
+    },
   },
   {
     id: "bbe6e2f8-c3e3-4bca-80be-b6cc0b206e49",
     name: "Fuel Delivery",
     icon: "https://res.cloudinary.com/yhomi1996/image/upload/v1729083628/cwdzhsmxftjrp2zjb5g1.png",
+    image: "/services/vehicle_fliud_top.png",
     serviceType: "Emergency Fuel Delivery",
     tagline: "Out of fuel? We'll bring enough to get you moving.",
     description:
@@ -350,6 +475,7 @@ const services: ServiceData[] = [
     id: "f285a589-2abd-4f2f-a07b-636f11c86475",
     name: "Mobile Mechanic",
     icon: "https://res.cloudinary.com/yhomi1996/image/upload/v1729082772/ig7gzibb4wzi2vhg5rm1.png",
+    image: "/services/mobile_mechanic.png",
     serviceType: "Mobile Auto Repair",
     tagline: "The garage comes to you.",
     description:
@@ -366,6 +492,7 @@ const services: ServiceData[] = [
     id: "a0e0b7df-00b8-4f92-93dc-bce6568be673",
     name: "Emergency Towing",
     icon: "https://res.cloudinary.com/yhomi1996/image/upload/v1729082904/wmduv4nc2gufe5vmz7uf.png",
+    image: "/services/towing_service.png",
     serviceType: "Vehicle Towing",
     tagline: "When it can't be fixed on the spot, we move it safely.",
     description:
@@ -440,38 +567,159 @@ const services: ServiceData[] = [
     id: "5e436f4b-b633-4b22-8f44-79f3e98f04f6",
     name: "Vehicle Lockout",
     icon: "https://res.cloudinary.com/yhomi1996/image/upload/v1729085715/sphhnylfbo6regoj9cik.png",
+    image: "/services/vehicle_lockout_service.png",
     serviceType: "Lockout Assistance",
-    tagline: "Keys locked inside? We'll get you back in.",
+    tagline: "Locked out? We'll get you back in — fast.",
     description:
-      "It happens to everyone at some point — keys left on the seat, door clicks shut, and you're locked out. Our lockout specialists are trained in non-destructive entry techniques that open most vehicles without any damage to the lock, door frame, or window. Whether your keys are inside, broken in the lock, or you've lost them entirely, we'll assess the situation and get you back behind the wheel as quickly as possible.",
+      "Whether you're locked out of your car at home, at work, in a parking lot, or stranded roadside, AllDrive SOS connects you with independent roadside technicians who can assist with vehicle lockout service at your location — without searching multiple companies or waiting long hours.",
     features: [
-      "Non-destructive entry — no damage to locks or doors",
-      "Keys-in-car retrieval for all vehicle types",
-      "Broken key extraction",
+      "On-site vehicle lockout assistance",
+      "Non-damaging door unlocking methods",
+      "Emergency roadside access support",
+      "Safety-first vehicle entry techniques",
       "Works on most makes and models",
-      "Fast response time across service areas",
     ],
+    seo: {
+      title: "Vehicle Lockout Service Near You | Locked Out of Car Help | AllDrive SOS",
+      intro:
+        "Locked out of your vehicle? AllDrive SOS helps you quickly connect with independent roadside assistance providers who can get you back in — without damaging your car. Request service, receive competitive quotes, and choose a provider near you.",
+      searchSection: {
+        heading: "Fast Vehicle Lockout Help — Wherever You Are",
+        keywords: [
+          "vehicle lockout service near me",
+          "car lockout assistance USA",
+          "emergency vehicle lockout service",
+          "24/7 car lockout help near me",
+          "roadside lockout service nationwide",
+          "locked out of car help USA",
+        ],
+        text: "If you're searching for vehicle lockout service near me, car lockout assistance, or emergency lockout help, AllDrive SOS gives you a faster way to connect with nearby professionals. Help is just a request away — wherever you're stranded.",
+      },
+      whenToUse: {
+        heading: "When to Request Vehicle Lockout Service",
+        situations: [
+          "Keys are locked inside the vehicle",
+          "Key fob is left inside the trunk or cabin",
+          "Doors automatically locked after exiting",
+          "Lost or misplaced car keys during travel",
+          "Emergency roadside lockout situations",
+          "Unexpected vehicle access issues at home or work",
+        ],
+        footer:
+          "Instead of breaking in and risking damage, request professional lockout assistance and get help where you are.",
+      },
+      offersSection: {
+        heading: "Emergency Car Lockout Assistance",
+        intro:
+          "Being locked out is stressful — fast help matters. AllDrive SOS connects you with technicians who offer:",
+        offers: [
+          "On-site vehicle lockout assistance",
+          "Non-damaging door unlocking methods",
+          "Keys-in-car retrieval",
+          "Emergency roadside access support",
+        ],
+        footer:
+          "You can request help anytime and get connected with someone nearby ready to respond.",
+      },
+      areaSection: {
+        heading: "Vehicle Lockout Service in Maryland, DC, and Virginia",
+        areas: DMV_AREAS,
+        footer:
+          "If you need car lockout help near you, you can quickly find available technicians in your area.",
+      },
+      whySection: {
+        heading: "Why Use AllDrive SOS",
+        footer:
+          "You get quick access to professional lockout help without risking damage to your vehicle.",
+      },
+      cta: {
+        heading: "Request Lockout Assistance Now",
+        text: "Don't try to force your way in and risk damaging your vehicle. Request vehicle lockout service through AllDrive SOS and connect with nearby professionals in minutes. Compare quotes, choose your provider, and track their arrival — all in one place.",
+        buttonLabel: "Request Lockout Service",
+      },
+    },
   },
   {
     id: "fffad1bf-97dc-44c5-a314-52b2862d9688",
     name: "Accident Cleanup",
     icon: "https://res.cloudinary.com/yhomi1996/image/upload/v1733489567/i0izsv6nj0agwhzzha4r.png",
+    image: "/services/accident_cleanup_service.png",
     serviceType: "Post-Accident Cleanup",
     tagline: "We handle the aftermath so you don't have to.",
     description:
-      "After a collision, the scene can be hazardous to other road users and distressing to deal with alone. Our post-accident cleanup team arrives promptly to contain fluid spills, remove glass and debris, and restore safe road conditions. We work efficiently and professionally, coordinating with towing if the vehicle needs to be moved, so you can focus on what matters while we take care of the scene.",
+      "After a collision or roadway incident, debris, fluids, and damaged vehicle parts can create serious safety hazards. AllDrive SOS connects drivers with independent roadside assistance providers who can respond quickly and handle accident cleanup — so you can focus on what matters while they take care of the scene.",
     features: [
-      "Glass, debris, and wreckage removal",
-      "Fluid spill containment and clean-up",
+      "On-site accident cleanup assistance",
+      "Removal of vehicle debris and hazards",
+      "Fluid spill containment and cleanup",
       "Coordination with towing services as needed",
       "Safe scene management to protect other road users",
-      "Prompt, professional, and discreet",
     ],
+    seo: {
+      title: "Accident Cleanup Service Near You | Roadside Debris Removal | AllDrive SOS",
+      intro:
+        "After a vehicle collision or roadway incident, debris and fluid spills create dangerous conditions. AllDrive SOS helps you quickly connect with independent providers who can assist with accident cleanup at your location. Request service and get connected with nearby help fast.",
+      searchSection: {
+        heading: "Accident Cleanup Help — Fast Response Nationwide",
+        keywords: [
+          "accident cleanup service near me",
+          "roadside accident cleanup USA",
+          "emergency vehicle accident cleanup",
+          "mobile accident cleanup service",
+          "24/7 accident cleanup roadside assistance",
+          "car accident debris cleanup service",
+        ],
+        text: "If you're searching for accident cleanup service near me or emergency roadside debris removal, AllDrive SOS gives you a faster way to connect with nearby cleanup professionals. Get help where you are — without making multiple calls.",
+      },
+      whenToUse: {
+        heading: "When to Request Accident Cleanup Service",
+        situations: [
+          "A vehicle collision leaves debris on the roadway",
+          "Fluids or damaged parts create unsafe driving conditions",
+          "Minor accidents require roadside cleanup assistance",
+          "Parking lot or residential vehicle accidents occur",
+          "Emergency roadside breakdowns after an accident",
+          "Unexpected vehicle failure causing roadway hazards",
+        ],
+        footer:
+          "Instead of leaving a dangerous scene unattended, request accident cleanup and connect with help nearby.",
+      },
+      offersSection: {
+        heading: "On-Site Roadside Accident Cleanup",
+        intro:
+          "After an accident, quick action keeps everyone safe. AllDrive SOS connects you with providers who offer:",
+        offers: [
+          "Glass, debris, and wreckage removal",
+          "Fluid spill containment and cleanup",
+          "Roadway safety inspection",
+          "Coordination with towing services",
+        ],
+        footer:
+          "You can request help anytime and get connected with someone nearby ready to respond.",
+      },
+      areaSection: {
+        heading: "Accident Cleanup Service in Maryland, DC, and Virginia",
+        areas: DMV_AREAS,
+        footer:
+          "If you need accident cleanup near you, you can quickly find available providers in your area.",
+      },
+      whySection: {
+        heading: "Why Use AllDrive SOS",
+        footer:
+          "You get fast, professional scene management — without searching multiple providers while dealing with a stressful situation.",
+      },
+      cta: {
+        heading: "Request Accident Cleanup Now",
+        text: "Don't leave a dangerous scene unmanaged. Request accident cleanup service through AllDrive SOS and connect with nearby providers in minutes. Compare quotes, choose your provider, and track their arrival — all in one place.",
+        buttonLabel: "Request Accident Cleanup",
+      },
+    },
   },
   {
     id: "b3c6048d-5cc1-42b6-bc5e-703e5e8f231d",
     name: "Exotic Car Transport",
     icon: "https://res.cloudinary.com/yhomi1996/image/upload/v1731593833/sc9bzi0ulizxlarybayf.png",
+    image: "/services/exotic_car_transport.png",
     serviceType: "Luxury Vehicle Transport",
     tagline: "White-glove transport for vehicles that deserve it.",
     description:
@@ -547,6 +795,7 @@ const services: ServiceData[] = [
     id: "cf6a9ab4-2f0d-4bed-9d83-cd8f8d47c1da",
     name: "Vehicle Fluid Top-Up",
     icon: "https://res.cloudinary.com/yhomi1996/image/upload/v1731593765/bpu7wwljkndkax5adshl.png",
+    image: "/services/vehicle_fliud_top.png",
     serviceType: "Fluid Replenishment",
     tagline: "Keep your engine healthy — wherever you are.",
     description:
@@ -642,6 +891,7 @@ const services: ServiceData[] = [
     id: "fb36f088-f84d-42a3-a751-fff3d75b305e",
     name: "Mobile Detailing",
     icon: "https://res.cloudinary.com/yhomi1996/image/upload/v1731593650/qavw42ybym3ebxt7ntwi.png",
+    image: "/services/mobile_detailing_service.png",
     serviceType: "Auto Detailing",
     tagline: "Showroom finish. Delivered to your doorstep.",
     description:
@@ -658,6 +908,7 @@ const services: ServiceData[] = [
     id: "cd97fff5-07f4-48bd-967f-45bffefa2a63",
     name: "Jump Start",
     icon: "https://res.cloudinary.com/yhomi1996/image/upload/v1729086237/clmsvsrvecz2wtde4zdq.png",
+    image: "/services/jump_start_service.png",
     serviceType: "Battery Jump Start",
     tagline: "Dead battery? We'll get you started in minutes.",
     description:
@@ -814,13 +1065,21 @@ export default function ServiceDetails() {
                 </button>
               </div>
               <div className="lg:w-5/12 flex justify-center mt-10 lg:mt-0">
-                <div className="w-44 h-44 lg:w-56 lg:h-56 rounded-full bg-white/10 place-center">
+                {service.image ? (
                   <img
-                    src={service.icon}
+                    src={service.image}
                     alt={service.name}
-                    className="w-24 lg:w-32"
+                    className="w-full max-h-[360px] rounded-2xl object-cover"
                   />
-                </div>
+                ) : (
+                  <div className="w-44 h-44 lg:w-56 lg:h-56 rounded-full bg-white/10 place-center">
+                    <img
+                      src={service.icon}
+                      alt={service.name}
+                      className="w-24 lg:w-32"
+                    />
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -1054,13 +1313,21 @@ export default function ServiceDetails() {
               </button>
             </div>
             <div className="lg:w-5/12 flex justify-center mt-10 lg:mt-0">
-              <div className="w-44 h-44 lg:w-56 lg:h-56 rounded-full bg-white/10 place-center">
+              {service.image ? (
                 <img
-                  src={service.icon}
+                  src={service.image}
                   alt={service.name}
-                  className="w-24 lg:w-32"
+                  className="w-full max-h-[360px] rounded-2xl object-cover"
                 />
-              </div>
+              ) : (
+                <div className="w-44 h-44 lg:w-56 lg:h-56 rounded-full bg-white/10 place-center">
+                  <img
+                    src={service.icon}
+                    alt={service.name}
+                    className="w-24 lg:w-32"
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>
