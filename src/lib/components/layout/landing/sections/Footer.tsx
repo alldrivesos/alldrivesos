@@ -58,12 +58,13 @@ const Footer = () => {
       <div className="box text-white">
         <div className="lg:pt-20 py-12 lg:grid lg:grid-cols-6">
           <div className="col-span-2">
-            <link
-              to="/"
-              src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1706192917/rsh/Group_48097864_1_mopmlj.png"
-              alt="logo"
-              className="w-8/12 lg:w-6/12"
-            />
+            <Link to="/" alt="logo">
+              <img
+                src="https://res.cloudinary.com/greenmouse-tech/image/upload/v1706192917/rsh/Group_48097864_1_mopmlj.png"
+                alt=""
+                className="w-8/12 lg:w-6/12"
+              />
+            </Link>
             <div className="lg:w-10/12 mt-4">
               <p className="fs-500">
                 Download ALLDRIVE SOS, the free app that connects you to
