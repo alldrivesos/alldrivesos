@@ -1,6 +1,5 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import LandingLayout from "../../lib/components/layout/landing";
-import { getSingleBlogPost } from "../../lib/services/api/blogApi";
 import { useQuery } from "@tanstack/react-query";
 import CurveLoader from "../../lib/components/ui/loader/curveLoader/CurveLoader";
 import dayjs from "dayjs";
@@ -12,15 +11,23 @@ import { BsClock } from "react-icons/bs";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import { apiClient } from "../../lib/services/api/serviceApi";
 
 const BlogDetail = () => {
-  const { id } = useParams();
+  const [searchParams] = useSearchParams();
+  const title = searchParams.get("title");
   const { user } = useAuth();
   const navigate = useNavigate();
 
   const { data, isLoading } = useQuery({
-    queryKey: ["getSinglePost"],
-    queryFn: () => getSingleBlogPost(`${id}`),
+    queryKey: ["getSinglePost", title],
+    queryFn: async () => {
+      let resp = await apiClient.get(
+        `/blog-post/by-title/` + encodeURIComponent(title.replaceAll("-", " ")),
+      );
+      return resp.data;
+    },
+    enabled: !!title,
   });
 
   return (
@@ -94,7 +101,7 @@ const BlogDetail = () => {
                     </ReactMarkdown>*/}
                   </div>
                   <div className="mt-3">
-                    {user.token !== "" && <BlogComments id={id} />}
+                    {user.token !== "" && <BlogComments id={data?.data?.id} />}
                   </div>
                 </div>
               </div>

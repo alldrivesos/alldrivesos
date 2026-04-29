@@ -19,7 +19,7 @@ const RelatedNews:FC<Props> = ({id}) => {
         <div className="mt-3 p-2 grid gap-3">
             {
                 data && data?.data?.map((item:any, i:number) => (
-                    <div className="flex items-center gap-x-3 cursor-pointer" key={i} onClick={() => navigate(`/blog/${item.id}`)}>
+                    <div className="flex items-center gap-x-3 cursor-pointer" key={i} onClick={() => navigate(`/blog/detail?title=${encodeURIComponent(item.title.replaceAll(" ", "-"))}`)}>
                         <img src={item.coverImage} alt="cover-image" className="w-[100px] h-[80px]" />
                         <div>
                             <p className="fs-400">{item.title}</p>

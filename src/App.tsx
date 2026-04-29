@@ -55,7 +55,7 @@ function App() {
         <Route path="/all-services" element={<AllServices />} />
         <Route path="/all-services/:name/" element={<ServiceDetails />} />
         <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:id" element={<BlogDetail />} />
+        <Route path="/blog/detail" element={<BlogDetail />} />
         <Route path="/providers-faqs" element={<ProvidersFaqPage />} />
         <Route path="/request" element={<ServicesPage />} />
         <Route path="/request/:id" element={<RequestPage />} />
